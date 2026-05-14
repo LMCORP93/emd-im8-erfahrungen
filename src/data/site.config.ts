@@ -73,7 +73,7 @@ const config: SiteConfig = {
     description: 'IM8 Erfahrungen auf Deutsch: Was steckt in Daily Ultimate Essentials, für wen lohnt sich der All-in-one Drink, was kostet IM8 und welchen Rabattcode gibt es?',
     ogImage: '/og-image.jpg',
   },
-  analyticsMeasurementId: undefined,
+  analyticsMeasurementId: 'G-B73KTXYFL9',
   breadcrumbs: [{ label: 'IM8 Erfahrungen', href: '/' }],
   quickSummary: {
     assets: [
