@@ -1,0 +1,11 @@
+# Canonical / legacy redirects for IM8 Erfahrungen preview
+/contact / 301
+/contact/ / 301
+/mentions-legales /legal-notice/ 301
+/mentions-legales/ /legal-notice/ 301
+/politique-de-confidentialite /privacy-policy/ 301
+/politique-de-confidentialite/ /privacy-policy/ 301
+/datenschutz /privacy-policy/ 301
+/datenschutz/ /privacy-policy/ 301
+/impressum /legal-notice/ 301
+/impressum/ /legal-notice/ 301

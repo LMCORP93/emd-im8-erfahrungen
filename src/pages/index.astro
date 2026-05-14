@@ -1,0 +1,157 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import BlogHero from '@/components/BlogHero.astro';
+import FirstReview from '@/components/FirstReview.astro';
+import TableOfContents from '@/components/TableOfContents.astro';
+import SidebarCTA from '@/components/SidebarCTA.astro';
+import ReviewPromoCard from '@/components/ReviewPromoCard.astro';
+import FAQSection from '@/components/FAQSection.astro';
+import ContentImage from '@/components/ContentImage.astro';
+import InnerNote from '@/components/InnerNote.astro';
+import config from '@/data/site.config';
+
+const topProduct = config.products[0];
+const pageTitle = 'IM8 Erfahrungen 2026: Test, Preis, Rabattcode & ehrliche Einschätzung';
+const pageDescription = 'Unsere IM8 Erfahrungen auf Deutsch: Was kann Daily Ultimate Essentials, für wen lohnt sich der All-in-one Drink, wo liegen die Grenzen und wie nutzt du den Rabattcode?';
+const reviewProduct = {
+  ...topProduct,
+  productCategory: config.productCategory,
+  shipping: topProduct.shipping || 'Deutschland prüfen',
+};
+const faq = config.faq;
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <script type="application/ld+json" slot="json-ld" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [{ '@type': 'ListItem', position: 1, name: 'IM8 Erfahrungen', item: config.domain }],
+  })} />
+  <script type="application/ld+json" slot="json-ld" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: pageTitle,
+    description: pageDescription,
+    image: new URL('/images/content/im8-erfahrungen-hero.webp', config.domain).toString(),
+    author: { '@type': 'Person', name: config.author.name },
+    publisher: { '@type': 'Organization', name: config.siteName },
+    datePublished: '2026-05-14',
+    dateModified: '2026-05-14',
+    mainEntityOfPage: config.domain,
+  })} />
+  <script type="application/ld+json" slot="json-ld" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: topProduct.name,
+    image: topProduct.image,
+    brand: { '@type': 'Brand', name: topProduct.brand },
+    offers: { '@type': 'Offer', priceCurrency: 'USD', price: topProduct.discountPrice.replace(/[^\d.]/g, ''), availability: 'https://schema.org/InStock', url: topProduct.affiliateLink },
+    aggregateRating: { '@type': 'AggregateRating', ratingValue: topProduct.rating, bestRating: 10, reviewCount: topProduct.reviewCount },
+  })} />
+  <script type="application/ld+json" slot="json-ld" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faq.map((item) => ({ '@type': 'Question', name: item.question, acceptedAnswer: { '@type': 'Answer', text: item.answer } })),
+  })} />
+
+  <BlogHero
+    title={pageTitle}
+    description="Ich habe mir IM8 als deutsche Review-Seite angeschaut: nicht als Wundermittel, sondern als Premium-All-in-one Drink für Menschen, die ihre tägliche Supplement-Routine einfacher machen wollen."
+    author={config.author.name}
+    authorAvatar={config.author.avatar}
+    date="14. Mai 2026"
+    readingTime="12 Min. Lesezeit"
+    breadcrumbs={[{ label: 'IM8 Erfahrungen', href: '/' }]}
+    bannerImage="/images/content/im8-erfahrungen-hero.webp"
+    product={{ name: topProduct.name, image: topProduct.image, promoCode: topProduct.promoCode, promoPercent: topProduct.promoPercent, originalPrice: topProduct.originalPrice, discountPrice: topProduct.discountPrice, affiliateLink: topProduct.affiliateLink }}
+    heroButton={{ text: 'Zum Erfahrungsbericht', href: '#kurzfassung' }}
+    showOfferBlock={false}
+  />
+
+  <main style="background-color:#ffffff;">
+    <div class="container-large padding-global"><div class="padding-section-medium"><div class="blog-grid">
+      <div class="content-column">
+        <div id="kurzfassung">
+          <FirstReview
+            tag="KURZ GESAGT"
+            heading="IM8 ist interessant, wenn du eine komplette tägliche Routine statt fünf einzelner Supplements suchst."
+            paragraphs={[
+              'Mein erster Eindruck: IM8 ist kein günstiges Basisprodukt, sondern ein klar positionierter Premium-Drink. Der Vorteil liegt weniger in einem einzelnen spektakulären Inhaltsstoff, sondern in der Vereinfachung der Routine: ein Pulver, ein Getränk, ein täglicher Slot.',
+              'Für deutsche Käufer ist IM8 vor allem dann spannend, wenn der Alltag bereits voll ist und man keine Lust auf mehrere Dosen, Kapseln und Einzelbestellungen hat. Der Preis ist der größte Gegenpunkt, deshalb sollte man IM8 eher als Lifestyle- und Convenience-Produkt betrachten.'
+            ]}
+            assets={config.quickSummary.assets}
+            considerations={config.quickSummary.considerations}
+            product={{ brandName: topProduct.brand, brandLogoSrc: topProduct.brandLogo, rating: topProduct.rating, reviewLabel: 'Premium Daily-Drink im Test', ctaText: 'Angebot ansehen', ctaLink: topProduct.affiliateLink }}
+          />
+        </div>
+
+        <TableOfContents items={config.tocItems} />
+
+        <section id="was-ist-im8" class="rich-text seo-guide">
+          <h2>Was ist IM8?</h2>
+          <p><strong>IM8 Daily Ultimate Essentials</strong> ist ein All-in-one Nahrungsergänzungspulver, das als tägliches Getränk genutzt wird. Die Marke verkauft nicht einfach ein einzelnes Vitamin oder ein klassisches Elektrolytprodukt, sondern eine komplette Routine in Pulverform. Genau das ist der Kern des Produkts: weniger einzelne Supplements, dafür ein wiederholbarer Drink am Morgen oder im Tagesverlauf.</p>
+          <p>Der Ansatz passt zum aktuellen Markt: Viele Menschen wollen Energie, Fokus, Basisversorgung und ein besseres Gefühl für ihre Routine, haben aber keine Lust, jeden Tag mehrere Kapseln und Pulver zu kombinieren. IM8 setzt deshalb auf Convenience und Premium-Auftritt. Das ist kaufpsychologisch stark, aber es bedeutet auch: Man bezahlt nicht nur für die Rohstoffe, sondern für eine fertige, einfache Lösung.</p>
+          <p>Wichtig ist die Erwartung. IM8 ist kein Medikament und sollte auch nicht so bewertet werden. Wer ein konkretes medizinisches Problem hat, braucht ärztliche Beratung. Wer dagegen eine hochwertige tägliche Ergänzung sucht und bereit ist, mehr für Einfachheit zu zahlen, gehört eher zur Zielgruppe.</p>
+        </section>
+
+        <ReviewPromoCard product={reviewProduct} />
+
+        <section id="erfahrungen" class="rich-text seo-guide">
+          <h2>Unsere IM8 Erfahrungen: wo der Drink stark ist</h2>
+          <p>Die größte Stärke von IM8 ist die Klarheit des Use-Cases. Du kaufst kein Nischenprodukt für einen einzigen Moment, sondern ein Produkt, das sich in eine tägliche Routine einfügen soll. Das ist besonders relevant für Menschen, die morgens ohnehin Kaffee, Shake oder ein funktionelles Getränk trinken und diesen Moment bewusster nutzen wollen.</p>
+          <p>In der Praxis ist diese Einfachheit ein echter Vorteil. Viele Supplement-Routinen scheitern nicht an fehlender Motivation, sondern an Reibung: zu viele Dosen, zu viele Einnahmezeiten, zu viele Nachbestellungen. IM8 reduziert diese Reibung. Das Produkt ist dadurch nicht automatisch besser als jede einzelne Alternative, aber es ist leichter konsequent zu nutzen.</p>
+          <p>Der zweite Pluspunkt ist die Premium-Wahrnehmung. Die Marke wirkt international, sauber und stark auf Conversion gebaut. Für ein deutsches Publikum kann das funktionieren, weil viele Käufer im Bereich Longevity, Performance und Healthspan nach genau solchen Marken suchen. Gleichzeitig muss man ehrlich bleiben: Premium-Wahrnehmung ersetzt keine individuelle Verträglichkeit und keine medizinische Aussage.</p>
+        </section>
+
+        <ContentImage src="/images/content/im8-erfahrungen-hero.webp" alt="IM8 Erfahrungen: grüner Daily-Drink in einer hellen Küche" caption="IM8 funktioniert am besten als täglicher Routine-Drink, nicht als billiges Einzel-Supplement." />
+
+        <section id="inhaltsstoffe" class="rich-text seo-guide">
+          <h2>Inhaltsstoffe & Formel: eher Komplett-Routine als Einzelwirkstoff</h2>
+          <p>Bei IM8 sollte man die Formel nicht wie ein isoliertes Magnesium-, Vitamin-D- oder Ashwagandha-Produkt bewerten. Der Reiz liegt in der Kombination. Das kann praktisch sein, weil mehrere Kategorien in einem Getränk landen. Es kann aber auch weniger passend sein, wenn du bereits gezielt supplementierst und genaue Dosierungen einzelner Nährstoffe kontrollieren willst.</p>
+          <p>Aus SEO- und Käuferperspektive ist diese Positionierung stark: IM8 spricht Menschen an, die nach einer modernen Alternative zur klassischen Pillenbox suchen. Aus Gesundheits- und Compliance-Perspektive sollte man die Versprechen aber sauber halten. Nahrungsergänzungsmittel unterstützen eine Ernährung nur dann sinnvoll, wenn sie zur Person, Ernährung und Verträglichkeit passen.</p>
+          <p>Mein pragmatischer Blick: Wenn du gar keine Routine hast und eine einfache Premium-Lösung willst, ist IM8 interessant. Wenn du schon Blutwerte, Einzelpräparate und klare Ziele hast, solltest du genauer prüfen, ob eine breite All-in-one Formel wirklich die beste Wahl ist.</p>
+        </section>
+
+        <InnerNote emoji="📌" text="IM8 ist vor allem ein Convenience-Produkt: stark, wenn du Vereinfachung willst; weniger stark, wenn du einzelne Dosierungen maximal präzise steuern möchtest." />
+
+        <section id="preis" class="rich-text seo-guide">
+          <h2>Preis, Rabattcode & Kauf: worauf du achten solltest</h2>
+          <p>Der Preis ist bei IM8 der wichtigste Gegenpunkt. Das Produkt liegt klar im Premium-Segment. Deshalb sollte man es nicht mit dem billigsten Multivitamin vergleichen, sondern mit der Frage: Würde ich sonst mehrere Produkte kaufen und täglich kombinieren? Wenn ja, kann der Preis nachvollziehbarer werden. Wenn nein, wirkt IM8 schnell teuer.</p>
+          <p>Aktuell ist über unseren Partnerlink der Code <strong>{topProduct.promoCode}</strong> hinterlegt. Der Code sollte den Einstieg günstiger machen, aber die finale Ersparnis hängt immer vom Checkout, Land, Versand und eventuell einem Abo-Modell ab. Prüfe den Endpreis deshalb vor dem Kauf direkt auf der offiziellen Seite.</p>
+          <p>Ich würde IM8 nicht nur wegen eines Rabattcodes kaufen. Der Code ist ein Bonus. Die eigentliche Kaufentscheidung sollte sein: Willst du eine einfache tägliche All-in-one Routine und bist du bereit, dafür einen Premium-Preis zu zahlen?</p>
+        </section>
+
+        <ReviewPromoCard product={reviewProduct} />
+
+        <section id="fuer-wen" class="rich-text seo-guide">
+          <h2>Für wen lohnt sich IM8?</h2>
+          <h3>Gute Zielgruppe</h3>
+          <p>IM8 passt zu Menschen, die eine moderne Health-Routine suchen, aber keine komplizierte Supplement-Strategie bauen wollen. Besonders interessant ist es für Käufer, die morgens ohnehin einen Shake oder funktionellen Drink nutzen und diesen Moment mit einem breiteren Produkt ersetzen möchten.</p>
+          <h3>Weniger gute Zielgruppe</h3>
+          <p>Weniger passend ist IM8, wenn du sehr preissensibel bist oder nur einen einzelnen Nährstoff ergänzen möchtest. Auch wenn du bereits eine durchdachte Routine mit Blutwerten, Arztberatung und gezielten Produkten hast, solltest du nicht automatisch auf eine All-in-one Formel wechseln.</p>
+          <h3>Mein realistischer Blick</h3>
+          <p>IM8 ist kein Pflichtkauf. Es ist ein starkes Premium-Angebot für eine bestimmte Art Käufer: Menschen, die Einfachheit, Marke, Routine und ein hochwertiges Drink-Format schätzen. Genau in diesem Segment hat IM8 Potenzial.</p>
+        </section>
+
+        <section id="verdict" class="rich-text seo-guide">
+          <h2>Fazit: Sind die IM8 Erfahrungen positiv?</h2>
+          <p><strong>Ja, aber mit klarer Einordnung.</strong> IM8 überzeugt als Premium-All-in-one Drink, weil der Nutzen sofort verständlich ist: eine tägliche Routine, weniger Einzelprodukte, moderner Markenauftritt und ein einfacher Kaufpfad. Für deutsche Käufer, die nach IM8 Erfahrungen suchen, ist das wahrscheinlich der wichtigste Punkt.</p>
+          <p>Die Grenze ist genauso klar: Der Preis ist hoch, die Formel ist breit und nicht jeder braucht ein All-in-one Produkt. Wer nur ein günstiges Basis-Supplement sucht, findet wahrscheinlich bessere Alternativen. Wer aber bewusst eine hochwertige Routine will, kann IM8 ernsthaft prüfen.</p>
+          <p>Meine Empfehlung: IM8 über den offiziellen Link ansehen, den Code testen, den Endpreis prüfen und dann entscheiden, ob die Vereinfachung deiner Routine den Premium-Preis rechtfertigt.</p>
+        </section>
+
+        <section id="faq" class="faq-section"><FAQSection faq={faq} title="Häufige Fragen zu IM8" /></section>
+      </div>
+      <aside class="sidebar-column"><div class="sidebar-sticky"><SidebarCTA logoSrc={topProduct.brandLogo}
+              productName={topProduct.name}
+              brandName={topProduct.brand} promoCode={topProduct.promoCode} promoPercent={topProduct.promoPercent} originalPrice={topProduct.originalPrice} discountPrice={topProduct.discountPrice} ctaLink={topProduct.affiliateLink} heroImage={topProduct.image} rating={topProduct.rating} reviewCount={topProduct.reviewCount} /></div></aside>
+    </div></div></div>
+  </main>
+</BaseLayout>
+
+<style>
+  .seo-guide { margin-top: 1.5rem; padding-top: 1.5rem; border-top: 2px solid #f0ebe3; }
+  .seo-guide .rich-text h3, .seo-guide h3 { margin-top: 1.5rem; margin-bottom: .75rem; font-size: 1.25rem; font-weight: 600; color: #242424; }
+  .seo-guide p { margin-bottom: 1rem; line-height: 1.8; color: #444; }
+  .faq-section { margin-top: 1.5rem; padding-top: 1.5rem; border-top: 2px solid #f0ebe3; }
+</style>
