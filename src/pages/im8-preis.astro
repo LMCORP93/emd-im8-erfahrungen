@@ -31,7 +31,7 @@ const faq = [
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription}>
-  <script type="application/ld+json" slot="json-ld" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: pageTitle, description: pageDescription, image: new URL('/images/content/im8-preis-hero.webp', config.domain).toString(), author: { '@type': 'Person', name: config.author.name }, publisher: { '@type': 'Organization', name: config.siteName }, datePublished: '2026-05-14', dateModified: '2026-05-14', mainEntityOfPage: new URL('/im8-preis/', config.domain).toString() })} />
+  <script type="application/ld+json" slot="json-ld" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: pageTitle, description: pageDescription, image: new URL('/images/content/im8-preis-hero-brand-v3.webp', config.domain).toString(), author: { '@type': 'Person', name: config.author.name }, publisher: { '@type': 'Organization', name: config.siteName }, datePublished: '2026-05-14', dateModified: '2026-05-14', mainEntityOfPage: new URL('/im8-preis/', config.domain).toString() })} />
   <script type="application/ld+json" slot="json-ld" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map((item) => ({ '@type': 'Question', name: item.question, acceptedAnswer: { '@type': 'Answer', text: item.answer } })) })} />
 
   <BlogHero
@@ -42,7 +42,7 @@ const faq = [
     date="14. Mai 2026"
     readingTime='8 Min. Lesezeit'
     breadcrumbs={[{ label: 'IM8 Preis', href: '/im8-preis/' }]}
-    bannerImage='/images/content/im8-preis-hero.webp'
+    bannerImage='/images/content/im8-preis-hero-brand-v3.webp'
     product={{ name: topProduct.name, image: topProduct.image, promoCode: topProduct.promoCode, promoPercent: topProduct.promoPercent, originalPrice: topProduct.originalPrice, discountPrice: topProduct.discountPrice, affiliateLink: topProduct.affiliateLink }}
     showOfferBlock={true}
   />
@@ -97,7 +97,7 @@ const faq = [
 
 <section id="preis-rechnung" class="rich-text seo-guide">
           <h2>So solltest du den IM8 Preis wirklich rechnen</h2>
-          <ContentImage src="/images/content/im8-preis-check.webp" alt="IM8 Preis prüfen mit orangefarbenem Drink und leerem Beleg" caption="Der IM8 Preis sollte als Routine-Kosten betrachtet werden, nicht als isoliertes Pulver." />
+          <ContentImage src="/images/content/im8-preis-check-brand-v3.webp" alt="IM8 Preis prüfen mit orangefarbenem Drink und leerem Beleg" caption="Der IM8 Preis sollte als Routine-Kosten betrachtet werden, nicht als isoliertes Pulver." />
           <p>Beim IM8 Preis würde ich nicht mit der einfachen Frage „teuer oder günstig?“ starten. Das ist zu kurz. IM8 sollte mit einer kompletten Routine verglichen werden: mehrere Supplements, ein Drink-Format, weniger Entscheidungen und der Komfort, nicht alles einzeln zusammenzustellen.</p>
           <p>Das heißt nicht, dass der Preis automatisch gerechtfertigt ist. Es heißt nur, dass die Rechnung sauber sein muss. Wenn IM8 bei dir wirklich mehrere Produkte ersetzt, wird der Preis nachvollziehbarer. Wenn IM8 zusätzlich zu einer bereits vollen Routine gekauft wird, ist es deutlich schwerer zu rechtfertigen.</p>
           <ul>
@@ -110,7 +110,7 @@ const faq = [
 
         <section id="preis-vergleich" class="rich-text seo-guide">
           <h2>IM8 mit einer günstigeren Alternative vergleichen</h2>
-          <ContentImage src="/images/content/im8-preis-vergleich.webp" alt="IM8 Preisvergleich mit Premium-Routine ohne Verpackung" caption="Der echte Vergleich lautet: niedriger Preis gegen einfache Premium-Routine." />
+          <ContentImage src="/images/content/im8-preis-vergleich-brand-v3.webp" alt="IM8 Preisvergleich mit Premium-Routine ohne Verpackung" caption="Der echte Vergleich lautet: niedriger Preis gegen einfache Premium-Routine." />
           <p>Eine günstigere Alternative kann besser sein, wenn du genau weißt, was du brauchst. Wenn dein Ziel nur Magnesium, Vitamin D oder ein einzelner Wirkstoff ist, ist ein gezieltes Produkt oft logischer. IM8 wird dann interessant, wenn du Entscheidungen reduzieren und mehrere Bereiche in einer Routine bündeln willst.</p>
           <p>Deshalb ist die Suchintention „Preis“ so wichtig. Deutsche Käufer wollen den echten Kostenrahmen verstehen, nicht nur eine Werbeaussage lesen. Die Seite muss beide Seiten zeigen: Ja, der Code hilft. Nein, IM8 ist kein Discount-Produkt.</p>
           <ul>
@@ -125,7 +125,7 @@ const faq = [
 
 <section id="preis-checkliste" class="rich-text seo-guide">
           <h2>Checkliste vor dem Bezahlen</h2>
-          <ContentImage src="/images/content/im8-preis-checklist.webp" alt="IM8 Preis Checkliste mit leerem Notizbuch und orangefarbenem Drink" caption="Vor dem Kauf sollten Preis, Rhythmus und echte Nutzung klar sein." />
+          <ContentImage src="/images/content/im8-preis-checklist-brand-v3.webp" alt="IM8 Preis Checkliste mit leerem Notizbuch und orangefarbenem Drink" caption="Vor dem Kauf sollten Preis, Rhythmus und echte Nutzung klar sein." />
           <p>Vor dem Bezahlen würde ich eine kurze Checkliste durchgehen. Sie verhindert einen Impulskauf und macht den Rabattcode wirklich nützlich. Wenn du alles abhaken kannst, ist die Chance höher, dass IM8 tatsächlich genutzt wird. Wenn du bei mehreren Punkten unsicher bist, würde ich warten.</p>
           <ul>
             <li>✅ Ich möchte wirklich eine All-in-one Routine.</li>

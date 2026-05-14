@@ -32,7 +32,7 @@ const faq = [
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription}>
-  <script type="application/ld+json" slot="json-ld" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: pageTitle, description: pageDescription, image: new URL('/images/content/im8-rabattcode-hero.webp', config.domain).toString(), author: { '@type': 'Person', name: config.author.name }, publisher: { '@type': 'Organization', name: config.siteName }, datePublished: '2026-05-14', dateModified: '2026-05-14', mainEntityOfPage: new URL('/im8-rabattcode/', config.domain).toString() })} />
+  <script type="application/ld+json" slot="json-ld" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: pageTitle, description: pageDescription, image: new URL('/images/content/im8-rabattcode-hero-brand-v3.webp', config.domain).toString(), author: { '@type': 'Person', name: config.author.name }, publisher: { '@type': 'Organization', name: config.siteName }, datePublished: '2026-05-14', dateModified: '2026-05-14', mainEntityOfPage: new URL('/im8-rabattcode/', config.domain).toString() })} />
   <script type="application/ld+json" slot="json-ld" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map((item) => ({ '@type': 'Question', name: item.question, acceptedAnswer: { '@type': 'Answer', text: item.answer } })) })} />
 
   <BlogHero
@@ -43,7 +43,7 @@ const faq = [
     date="14. Mai 2026"
     readingTime="8 Min. Lesezeit"
     breadcrumbs={[{ label: 'IM8 Rabattcode', href: '/im8-rabattcode/' }]}
-    bannerImage="/images/content/im8-rabattcode-hero.webp"
+    bannerImage="/images/content/im8-rabattcode-hero-brand-v3.webp"
     product={{ name: topProduct.name, image: topProduct.image, promoCode: topProduct.promoCode, promoPercent: topProduct.promoPercent, originalPrice: topProduct.originalPrice, discountPrice: topProduct.discountPrice, affiliateLink: topProduct.affiliateLink }}
     showOfferBlock={true}
   />
@@ -99,7 +99,7 @@ const faq = [
 
         <section id="rabattcode-checkliste" class="rich-text seo-guide">
           <h2>Rabattcode richtig prüfen: die kurze Checkliste</h2>
-          <ContentImage src="/images/content/im8-rabattcode-checkout.webp" alt="IM8 Rabattcode im Checkout prüfen" caption="Der Code LMC ist nur dann wirklich interessant, wenn der finale Checkout sauber passt." />
+          <ContentImage src="/images/content/im8-rabattcode-checkout-brand-v3.webp" alt="IM8 Rabattcode im Checkout prüfen" caption="Der Code LMC ist nur dann wirklich interessant, wenn der finale Checkout sauber passt." />
           <p>Bei IM8 würde ich nicht einfach blind auf einen Coupon klicken. Das Produkt ist klar Premium, also muss der Rabatt in eine saubere Kaufentscheidung eingebettet werden. Der Code <strong>LMC</strong> mit <strong>-10%</strong> ist ein Vorteil, aber er sollte nicht der einzige Grund für den Kauf sein.</p>
           <p>Der wichtigste Punkt ist der finale Warenkorb. Manche Shops zeigen vorab einen attraktiven Preis, aber Versand, Steuern, Lieferland oder Abo-Auswahl verändern den Betrag. Deshalb ist der Checkout bei IM8 der Moment, in dem du wirklich entscheidest.</p>
           <ul>
@@ -114,7 +114,7 @@ const faq = [
 
         <section id="rabattcode-fehler" class="rich-text seo-guide">
           <h2>Typische Fehler bei IM8 Rabattcodes</h2>
-          <ContentImage src="/images/content/im8-rabattcode-routine.webp" alt="IM8 Routine mit Code LMC nüchtern bewerten" caption="Ein Rabatt ist gut, aber die Routine muss trotzdem zu dir passen." />
+          <ContentImage src="/images/content/im8-rabattcode-routine-brand-v3.webp" alt="IM8 Routine mit Code LMC nüchtern bewerten" caption="Ein Rabatt ist gut, aber die Routine muss trotzdem zu dir passen." />
           <p>Der häufigste Fehler ist, den Rabatt höher zu bewerten als das Produkt. IM8 macht Sinn, wenn du eine tägliche All-in-one Routine suchst. Wenn du nur nach dem günstigsten Einzelwirkstoff suchst, wird dich ein Rabattcode wahrscheinlich nicht überzeugen.</p>
           <p>Der zweite Fehler: Abo-Preis und Einmalkauf verwechseln. Viele Premium-Produkte zeigen den besten Preis bei wiederkehrender Lieferung. Das kann fair sein, wenn du langfristig nutzen willst. Für den ersten Kauf sollte aber klar sein, was du wirklich auswählst.</p>
           <ul>
@@ -128,7 +128,7 @@ const faq = [
 
         <section id="rabattcode-fazit" class="rich-text seo-guide">
           <h2>Mein Fazit zum IM8 Code LMC</h2>
-          <ContentImage src="/images/content/im8-rabattcode-faq.webp" alt="IM8 Rabattcode Fragen vor dem Kauf prüfen" caption="Der beste Rabatt ist transparent: Code, Endpreis, Versand und Entscheidung auf einen Blick." />
+          <ContentImage src="/images/content/im8-rabattcode-faq-brand-v3.webp" alt="IM8 Rabattcode Fragen vor dem Kauf prüfen" caption="Der beste Rabatt ist transparent: Code, Endpreis, Versand und Entscheidung auf einen Blick." />
           <p><strong>Ja, der Code LMC ist nützlich</strong>, weil er den ersten Kauf mit <strong>-10%</strong> attraktiver macht. Trotzdem bleibt der richtige Reflex: ruhig prüfen, nicht impulsiv bestellen.</p>
           <p>Wenn du eine kompakte Premium-Routine willst, kann IM8 Sinn ergeben. Wenn du nur sparen willst, gibt es wahrscheinlich günstigere Einzelprodukte. Diese Seite soll deshalb sortieren, nicht künstlich Druck machen.</p>
           <ul>
