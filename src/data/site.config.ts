@@ -54,8 +54,8 @@ const products: Product[] = [
 ];
 
 const config: SiteConfig = {
-  domain: 'https://emd-im8-erfahrungen.pages.dev',
-  isIndexable: false,
+  domain: 'https://im8-erfahrungen.de',
+  isIndexable: true,
   siteName: 'IM8 Erfahrungen',
   brand: 'IM8',
   product: 'Daily Ultimate Essentials',

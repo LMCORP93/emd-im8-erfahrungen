@@ -11,8 +11,8 @@ import InnerNote from '@/components/InnerNote.astro';
 import config from '@/data/site.config';
 
 const topProduct = config.products[0];
-const pageTitle = 'IM8 Erfahrungen 2026: Test, Preis, Rabattcode & ehrliche Einschätzung';
-const pageDescription = 'Unsere IM8 Erfahrungen auf Deutsch: Was kann Daily Ultimate Essentials, für wen lohnt sich der All-in-one Drink, wo liegen die Grenzen und wie nutzt du den Rabattcode?';
+const pageTitle = 'IM8 Erfahrungen 2026: Test, Preis & Rabattcode';
+const pageDescription = 'IM8 Erfahrungen auf Deutsch: Test, Preis, Inhaltsstoffe, Grenzen und Rabattcode LMC für Daily Ultimate Essentials im nüchternen Kaufcheck.';
 const reviewProduct = {
   ...topProduct,
   productCategory: config.productCategory,
@@ -42,11 +42,39 @@ const faq = config.faq;
   <script type="application/ld+json" slot="json-ld" set:html={JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'Product',
+    '@id': new URL('/#product-im8', config.domain).toString(),
     name: topProduct.name,
     image: topProduct.image,
+    description: topProduct.description,
+    category: topProduct.productType,
     brand: { '@type': 'Brand', name: topProduct.brand },
-    offers: { '@type': 'Offer', priceCurrency: 'USD', price: topProduct.discountPrice.replace(/[^\d.]/g, ''), availability: 'https://schema.org/InStock', url: topProduct.affiliateLink },
-    aggregateRating: { '@type': 'AggregateRating', ratingValue: topProduct.rating, bestRating: 10, reviewCount: topProduct.reviewCount },
+    offers: {
+      '@type': 'Offer',
+      priceCurrency: 'USD',
+      price: topProduct.discountPrice.replace(/[^\d.]/g, ''),
+      availability: 'https://schema.org/InStock',
+      url: topProduct.affiliateLink,
+      itemCondition: 'https://schema.org/NewCondition',
+      shippingDetails: {
+        '@type': 'OfferShippingDetails',
+        shippingDestination: { '@type': 'DefinedRegion', addressCountry: 'DE' },
+        shippingRate: { '@type': 'MonetaryAmount', value: 0, currency: 'USD' },
+        deliveryTime: {
+          '@type': 'ShippingDeliveryTime',
+          handlingTime: { '@type': 'QuantitativeValue', minValue: 0, maxValue: 2, unitCode: 'DAY' },
+          transitTime: { '@type': 'QuantitativeValue', minValue: 3, maxValue: 10, unitCode: 'DAY' },
+        },
+      },
+      hasMerchantReturnPolicy: {
+        '@type': 'MerchantReturnPolicy',
+        applicableCountry: 'DE',
+        returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
+        merchantReturnDays: 14,
+        returnMethod: 'https://schema.org/ReturnByMail',
+        returnFees: 'https://schema.org/ReturnFeesCustomerResponsibility',
+      },
+    },
+    aggregateRating: { '@type': 'AggregateRating', ratingValue: topProduct.rating, bestRating: 10, worstRating: 1, reviewCount: topProduct.reviewCount },
   })} />
   <script type="application/ld+json" slot="json-ld" set:html={JSON.stringify({
     '@context': 'https://schema.org',
