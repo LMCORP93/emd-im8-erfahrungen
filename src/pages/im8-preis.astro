@@ -1,0 +1,113 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import BlogHero from '@/components/BlogHero.astro';
+import FirstReview from '@/components/FirstReview.astro';
+import TableOfContents from '@/components/TableOfContents.astro';
+import SidebarCTA from '@/components/SidebarCTA.astro';
+import ReviewPromoCard from '@/components/ReviewPromoCard.astro';
+import FAQSection from '@/components/FAQSection.astro';
+import InnerNote from '@/components/InnerNote.astro';
+import config from '@/data/site.config';
+
+const topProduct = config.products[0];
+const reviewProduct = { ...topProduct, productCategory: config.productCategory, shipping: topProduct.shipping || 'Deutschland prüfen' };
+const pageTitle = 'IM8 Preis 2026: Kosten, Rabattcode und Angebot';
+const pageDescription = 'IM8 Preis auf Deutsch: Kosten, -10% Rabattcode LMC, Abo, Versand nach Deutschland und ob sich das Angebot wirklich lohnt.';
+const tocItems = [
+  { id: 'kurzfassung', label: 'Kurzfassung' },
+  { id: 'kosten', label: 'Kosten' },
+  { id: 'rabatt', label: 'Rabattcode' },
+  { id: 'abo-versand', label: 'Abo & Versand' },
+  { id: 'lohnt-sich', label: 'Lohnt sich der Preis?' },
+  { id: 'faq', label: 'FAQ' },
+];
+const faq = [
+  { question: 'Wie hoch ist der IM8 Rabatt mit Code LMC?', answer: 'Aktuell sind es -10%. Prüfe den finalen Rabatt immer im Checkout, weil Aktionen und Bedingungen sich ändern können.' },
+  { question: 'Ist IM8 günstig?', answer: 'Nein, IM8 ist ein Premium-Produkt. Es lohnt sich eher über Convenience und All-in-one Routine als über den niedrigsten Preis.' },
+  { question: 'Muss ich ein IM8 Abo abschließen?', answer: 'Das solltest du direkt im Checkout prüfen. Für den ersten Test ist ein Einmalkauf oft übersichtlicher.' },
+  { question: 'Gilt der IM8 Preis auch für Deutschland?', answer: 'Der finale Preis für Deutschland hängt von Versand, Steuern, Rabatt und Checkout-Bedingungen ab.' },
+];
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <script type="application/ld+json" slot="json-ld" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: pageTitle, description: pageDescription, image: new URL('/images/content/im8-preis-hero.webp', config.domain).toString(), author: { '@type': 'Person', name: config.author.name }, publisher: { '@type': 'Organization', name: config.siteName }, datePublished: '2026-05-14', dateModified: '2026-05-14', mainEntityOfPage: new URL('/im8-preis/', config.domain).toString() })} />
+  <script type="application/ld+json" slot="json-ld" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map((item) => ({ '@type': 'Question', name: item.question, acceptedAnswer: { '@type': 'Answer', text: item.answer } })) })} />
+
+  <BlogHero
+    title={pageTitle}
+    description='Preischeck für IM8: Was kostet der Premium-Drink, wie hilft der Code LMC und welche Punkte musst du vor dem Kauf prüfen?'
+    author={config.author.name}
+    authorAvatar={config.author.avatar}
+    date="14. Mai 2026"
+    readingTime='8 Min. Lesezeit'
+    breadcrumbs={[{ label: 'IM8 Preis', href: '/im8-preis/' }]}
+    bannerImage='/images/content/im8-preis-hero.webp'
+    product={{ name: topProduct.name, image: topProduct.image, promoCode: topProduct.promoCode, promoPercent: topProduct.promoPercent, originalPrice: topProduct.originalPrice, discountPrice: topProduct.discountPrice, affiliateLink: topProduct.affiliateLink }}
+    showOfferBlock={true}
+  />
+
+  <main style="background-color:#ffffff;">
+    <div class="container-large padding-global"><div class="padding-section-medium"><div class="blog-grid">
+      <div class="content-column">
+        <div id="kurzfassung">
+          <FirstReview
+            tag='PREIS-CHECK'
+            heading='IM8 ist preislich Premium. Der Code LMC mit -10% hilft, aber der Endpreis im Checkout bleibt entscheidend.'
+            paragraphs={['Beim IM8 Preis geht es nicht nur um den angezeigten Produktpreis. Für Käufer in Deutschland zählen auch Rabattcode, Versand, mögliche Abo-Optionen und der Vergleich mit einer kompletten Supplement-Routine.', 'Meine Empfehlung: IM8 nicht mit einem einfachen Multivitamin vergleichen. Vergleiche es mit der Frage, ob du mehrere Einzelprodukte durch einen täglichen Drink ersetzen willst. Dann wird die Preisentscheidung fairer.']}
+            assets={['Google Suggest bestätigt die Nachfrage nach im8 preis', 'DataForSEO zeigt Kaufnähe bei im8 kaufen und im8 deutschland', 'Code LMC aktuell mit -10% sichtbar machen', 'Gute Support-Seite für Coupon- und Checkout-Intent']}
+            considerations={['Finale Kosten nur im Checkout sicher', 'Versand nach Deutschland prüfen', 'Abo-Preis nicht mit Einmalkauf verwechseln']}
+            product={{ brandName: topProduct.brand, brandLogoSrc: topProduct.brandLogo, rating: topProduct.rating, reviewLabel: 'Preis & Angebots-Check', ctaText: 'Preis mit Code prüfen', ctaLink: topProduct.affiliateLink }}
+          />
+        </div>
+
+        <TableOfContents items={tocItems} />
+
+        <section id="kosten" class="rich-text seo-guide">
+          <h2>Was kostet IM8?</h2>
+          <p>IM8 liegt im Premium-Segment. Der Ausgangspreis im Template liegt aktuell bei {topProduct.originalPrice}, der reduzierte Preis mit Code bei {topProduct.discountPrice}. Diese Werte können sich ändern, deshalb zählt immer der finale Warenkorb.</p>
+          <p>Wichtig ist die richtige Vergleichsbasis: Ein einzelnes günstiges Supplement schlägt IM8 fast immer beim Preis. Ein Paket aus mehreren Vitaminen, Mineralstoffen, Pflanzenstoffen und täglichen Drinks kann den Vergleich aber verändern.</p>
+        </section>
+
+        <ReviewPromoCard product={reviewProduct} />
+
+<section id="rabatt" class="rich-text seo-guide">
+          <h2>IM8 Rabattcode: -10% mit Code LMC</h2>
+          <p>Der aktuelle Code lautet <strong>{topProduct.promoCode}</strong> und bringt aktuell <strong>-{topProduct.promoPercent}%</strong>. Nutze den offiziellen Link, prüfe den Code im Checkout und achte darauf, ob der Rabatt automatisch angewendet wird oder manuell eingetragen werden muss.</p>
+          <p>Coupon-Seiten zeigen oft nur den Code. Für eine echte Kaufentscheidung brauchst du mehr: Produktpreis, Rabatt, Versandkosten, Lieferland und Abo-Bedingungen.</p>
+        </section>
+
+        <ReviewPromoCard product={reviewProduct} />
+
+<section id="abo-versand" class="rich-text seo-guide">
+          <h2>Abo, Versand und Deutschland</h2>
+          <p>Viele Premium-Marken koppeln den besten Preis an eine wiederkehrende Lieferung. Das kann sinnvoll sein, wenn du IM8 dauerhaft nutzen willst. Für einen ersten Test würde ich aber bewusst prüfen, ob ein Einmalkauf möglich ist und wie einfach du ein Abo verwalten kannst.</p>
+          <p>Für Deutschland ist außerdem wichtig, ob Versandkosten, Steuern und Lieferzeit transparent angezeigt werden. DataForSEO zeigt für <strong>im8 deutschland</strong> eine relevante Nachfrage, also sollte diese Frage direkt beantwortet werden.</p>
+        </section>
+
+        <ReviewPromoCard product={reviewProduct} />
+
+<section id="lohnt-sich" class="rich-text seo-guide">
+          <h2>Lohnt sich der IM8 Preis?</h2>
+          <p>Ja, wenn du IM8 als Premium-Routine bewertest und mehrere Produkte vereinfachen möchtest. Nein, wenn du nur den günstigsten Nährstoff suchst. Der Preis ist dann schwer zu rechtfertigen.</p>
+          <InnerNote emoji="💶" text="Mein Preisfazit: Code LMC nutzen, -10% mitnehmen, aber erst kaufen, wenn der Endpreis inklusive Versand zu deiner Routine passt." />
+        </section>
+
+        <section id="faq" class="faq-section"><FAQSection faq={faq} title="Häufige Fragen zu IM8" /></section>
+      </div>
+      <aside class="sidebar-column"><div class="sidebar-sticky"><SidebarCTA logoSrc={topProduct.brandLogo}
+              productName={topProduct.name}
+              brandName={topProduct.brand} promoCode={topProduct.promoCode} promoPercent={topProduct.promoPercent} originalPrice={topProduct.originalPrice} discountPrice={topProduct.discountPrice} ctaLink={topProduct.affiliateLink} heroImage={topProduct.image} rating={topProduct.rating} reviewCount={topProduct.reviewCount} /></div></aside>
+    </div></div></div>
+  </main>
+</BaseLayout>
+
+<style>
+  .seo-guide { margin-top: 1.5rem; padding-top: 1.5rem; border-top: 2px solid #f0ebe3; }
+  .seo-guide h2 { margin-bottom: .75rem; }
+  .seo-guide h3 { margin-top: 1.5rem; margin-bottom: .75rem; font-size: 1.25rem; font-weight: 600; color: #242424; }
+  .seo-guide p { margin-bottom: 1rem; line-height: 1.8; color: #444; }
+  .seo-guide ul { padding-left: 1.25rem; margin: 0 0 1rem; color: #444; line-height: 1.75; }
+  .faq-section { margin-top: 1.5rem; padding-top: 1.5rem; border-top: 2px solid #f0ebe3; }
+  .rich-text a.btn-solid, .rich-text a.btn-solid:hover, .rich-text a.btn-solid:focus { color: #fff; text-decoration: none; }
+</style>
+

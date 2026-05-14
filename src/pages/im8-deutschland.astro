@@ -1,0 +1,119 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import BlogHero from '@/components/BlogHero.astro';
+import FirstReview from '@/components/FirstReview.astro';
+import TableOfContents from '@/components/TableOfContents.astro';
+import SidebarCTA from '@/components/SidebarCTA.astro';
+import ReviewPromoCard from '@/components/ReviewPromoCard.astro';
+import FAQSection from '@/components/FAQSection.astro';
+import InnerNote from '@/components/InnerNote.astro';
+import config from '@/data/site.config';
+
+const topProduct = config.products[0];
+const reviewProduct = { ...topProduct, productCategory: config.productCategory, shipping: topProduct.shipping || 'Deutschland prüfen' };
+const pageTitle = 'IM8 Deutschland: Kaufen, Versand und Rabattcode';
+const pageDescription = 'IM8 Deutschland: Wo du IM8 kaufen kannst, was beim Versand wichtig ist und wie du den -10% Rabattcode LMC im Checkout prüfst.';
+const tocItems = [
+  { id: 'kurzfassung', label: 'Kurzfassung' },
+  { id: 'verfuegbarkeit', label: 'Verfügbarkeit' },
+  { id: 'kaufen', label: 'Kaufen' },
+  { id: 'versand', label: 'Versand' },
+  { id: 'checkliste', label: 'Checkliste' },
+  { id: 'faq', label: 'FAQ' },
+];
+const faq = [
+  { question: 'Kann man IM8 in Deutschland kaufen?', answer: 'Das solltest du über den offiziellen Link im Checkout prüfen. Entscheidend ist, ob Deutschland als Lieferland akzeptiert wird.' },
+  { question: 'Funktioniert der Code LMC in Deutschland?', answer: 'Teste den Code direkt im Checkout. Aktuell ist der Rabatt mit -10% kommuniziert, final zählt aber der Warenkorb.' },
+  { question: 'Warum gibt es eine eigene IM8 Deutschland Seite?', answer: 'Weil Suchdaten und Google Suggest zeigen, dass deutsche Käufer Verfügbarkeit, Versand und Kaufbedingungen separat prüfen.' },
+  { question: 'Ist diese Seite der offizielle IM8 Support?', answer: 'Nein. Diese Seite ist ein unabhängiger Kauf- und Erfahrungscheck, kein offizieller Kundenservice.' },
+];
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <script type="application/ld+json" slot="json-ld" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: pageTitle, description: pageDescription, image: new URL('/images/content/im8-deutschland-hero.webp', config.domain).toString(), author: { '@type': 'Person', name: config.author.name }, publisher: { '@type': 'Organization', name: config.siteName }, datePublished: '2026-05-14', dateModified: '2026-05-14', mainEntityOfPage: new URL('/im8-deutschland/', config.domain).toString() })} />
+  <script type="application/ld+json" slot="json-ld" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map((item) => ({ '@type': 'Question', name: item.question, acceptedAnswer: { '@type': 'Answer', text: item.answer } })) })} />
+
+  <BlogHero
+    title={pageTitle}
+    description='IM8 aus Deutschland kaufen: Verfügbarkeit, Versand, Checkout, Code LMC und die wichtigsten Punkte vor der Bestellung.'
+    author={config.author.name}
+    authorAvatar={config.author.avatar}
+    date="14. Mai 2026"
+    readingTime='8 Min. Lesezeit'
+    breadcrumbs={[{ label: 'IM8 Deutschland', href: '/im8-deutschland/' }]}
+    bannerImage='/images/content/im8-deutschland-hero.webp'
+    product={{ name: topProduct.name, image: topProduct.image, promoCode: topProduct.promoCode, promoPercent: topProduct.promoPercent, originalPrice: topProduct.originalPrice, discountPrice: topProduct.discountPrice, affiliateLink: topProduct.affiliateLink }}
+    showOfferBlock={true}
+  />
+
+  <main style="background-color:#ffffff;">
+    <div class="container-large padding-global"><div class="padding-section-medium"><div class="blog-grid">
+      <div class="content-column">
+        <div id="kurzfassung">
+          <FirstReview
+            tag='DEUTSCHLAND'
+            heading='Für deutsche Käufer ist nicht nur die Marke spannend, sondern der finale Checkout: Versand, Endpreis und Code LMC entscheiden.'
+            paragraphs={['DataForSEO zeigt für im8 deutschland eine stärkere Nachfrage als viele andere Support-Begriffe. Das ist logisch: Wer in Deutschland sucht, will wissen, ob IM8 verfügbar ist, wie der Versand läuft und ob der Rabattcode funktioniert.', 'Diese Seite beantwortet genau diese Kaufhürde. Sie ersetzt keine offizielle Herstellerinformation, sondern hilft dir, die Bestellung sauber zu prüfen.']}
+            assets={['DataForSEO: im8 deutschland ca. 110 Suchanfragen monatlich in DE', 'Google Suggest: im8 deutschland und im8 kaufen sichtbar', 'Klarer Checkout-Intent statt reiner Infoartikel', 'Gute interne Brücke zur Rabattcode- und Testseite']}
+            considerations={['Verfügbarkeit kann sich ändern', 'Versandkosten final im Checkout prüfen', 'Kein offizieller Kundenservice der Marke']}
+            product={{ brandName: topProduct.brand, brandLogoSrc: topProduct.brandLogo, rating: topProduct.rating, reviewLabel: 'Deutschland-Check', ctaText: 'Verfügbarkeit prüfen', ctaLink: topProduct.affiliateLink }}
+          />
+        </div>
+
+        <TableOfContents items={tocItems} />
+
+        <section id="verfuegbarkeit" class="rich-text seo-guide">
+          <h2>Ist IM8 in Deutschland verfügbar?</h2>
+          <p>IM8 kann über den offiziellen Online-Shop beziehungsweise Link geprüft werden. Entscheidend ist nicht nur, ob die Seite aufrufbar ist, sondern ob Deutschland im Checkout als Lieferland akzeptiert wird und welche Versandbedingungen angezeigt werden.</p>
+          <p>Weil internationale Shops Bedingungen ändern können, sollte diese Prüfung immer live passieren. Genau deshalb verlinken wir auf den offiziellen Checkout und empfehlen, den Endpreis nicht vorher zu schätzen.</p>
+        </section>
+
+        <ReviewPromoCard product={reviewProduct} />
+
+<section id="kaufen" class="rich-text seo-guide">
+          <h2>IM8 in Deutschland kaufen: sinnvoller Ablauf</h2>
+          <p>Der pragmatische Ablauf ist einfach: offiziellen Link öffnen, Produkt in den Warenkorb legen, Deutschland als Lieferland wählen, Code LMC testen und dann den finalen Gesamtpreis prüfen. Erst danach ergibt eine Kaufentscheidung Sinn.</p>
+          <p>Wenn der Code greift, siehst du aktuell -10%. Wenn zusätzlich Versandkosten oder Abo-Optionen auftauchen, musst du diese in die Rechnung einbeziehen.</p>
+        </section>
+
+        <ReviewPromoCard product={reviewProduct} />
+
+<section id="versand" class="rich-text seo-guide">
+          <h2>Versand nach Deutschland: worauf achten?</h2>
+          <p>Achte auf Lieferzeit, Versandkosten, mögliche Zoll- oder Steuerhinweise und darauf, ob es eine wiederkehrende Lieferung ist. Premium-Supplements wirken oft günstiger, wenn ein Abo vorausgewählt ist. Das ist nicht schlecht, sollte aber bewusst entschieden werden.</p>
+          <p>Wenn du IM8 nur testen willst, ist Transparenz wichtiger als der niedrigste Monatswert. Ein klarer Einmalkauf kann psychologisch sauberer sein als ein günstiger wirkendes Abo, das du später verwalten musst.</p>
+        </section>
+
+        <ReviewPromoCard product={reviewProduct} />
+
+<section id="checkliste" class="rich-text seo-guide">
+          <h2>Checkliste vor der Bestellung</h2>
+          <ul>
+            <li>Code LMC eingeben und -10% prüfen.</li>
+            <li>Deutschland als Lieferland auswählen.</li>
+            <li>Versandkosten und Lieferzeit kontrollieren.</li>
+            <li>Abo oder Einmalkauf bewusst wählen.</li>
+            <li>Inhaltsstoffe und persönliche Verträglichkeit prüfen.</li>
+          </ul>
+          <InnerNote emoji="✅" text="Wenn alle fünf Punkte passen, ist IM8 für Deutschland deutlich sauberer zu bewerten als über den Produktpreis allein." />
+        </section>
+
+        <section id="faq" class="faq-section"><FAQSection faq={faq} title="Häufige Fragen zu IM8" /></section>
+      </div>
+      <aside class="sidebar-column"><div class="sidebar-sticky"><SidebarCTA logoSrc={topProduct.brandLogo}
+              productName={topProduct.name}
+              brandName={topProduct.brand} promoCode={topProduct.promoCode} promoPercent={topProduct.promoPercent} originalPrice={topProduct.originalPrice} discountPrice={topProduct.discountPrice} ctaLink={topProduct.affiliateLink} heroImage={topProduct.image} rating={topProduct.rating} reviewCount={topProduct.reviewCount} /></div></aside>
+    </div></div></div>
+  </main>
+</BaseLayout>
+
+<style>
+  .seo-guide { margin-top: 1.5rem; padding-top: 1.5rem; border-top: 2px solid #f0ebe3; }
+  .seo-guide h2 { margin-bottom: .75rem; }
+  .seo-guide h3 { margin-top: 1.5rem; margin-bottom: .75rem; font-size: 1.25rem; font-weight: 600; color: #242424; }
+  .seo-guide p { margin-bottom: 1rem; line-height: 1.8; color: #444; }
+  .seo-guide ul { padding-left: 1.25rem; margin: 0 0 1rem; color: #444; line-height: 1.75; }
+  .faq-section { margin-top: 1.5rem; padding-top: 1.5rem; border-top: 2px solid #f0ebe3; }
+  .rich-text a.btn-solid, .rich-text a.btn-solid:hover, .rich-text a.btn-solid:focus { color: #fff; text-decoration: none; }
+</style>
+

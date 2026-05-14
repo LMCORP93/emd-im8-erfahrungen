@@ -42,7 +42,7 @@ const products: Product[] = [
       'Sehr kompletter Daily-Drink statt einzelnes Standard-Supplement',
       'Premium-Positionierung mit Vitaminen, Mineralstoffen und Pflanzenstoffen',
       'Praktisch für Menschen, die mehrere Produkte durch eine Routine ersetzen wollen',
-      'Offizieller Partnerlink mit LMC-Code verfügbar'
+      'Offizieller Link mit LMC-Code verfügbar'
     ],
     cons: [
       'Deutlich teurer als einfache Multivitamin- oder Elektrolytprodukte',
@@ -67,7 +67,7 @@ const config: SiteConfig = {
   originalPrice: products[0].originalPrice,
   discountPrice: products[0].discountPrice,
   rating: products[0].rating,
-  author: { name: 'Tim', avatar: '/author-avatar.png', bio: 'Tester und Redakteur für Nahrungsergänzungsmittel bei LMC seit 2024.' },
+  author: { name: 'Tim', avatar: '/author-avatar.png', bio: 'Tester und Redakteur für Nahrungsergänzungsmittel seit 2024.' },
   seo: {
     title: 'IM8 Erfahrungen 2026: Test, Wirkung, Preis & Rabattcode',
     description: 'IM8 Erfahrungen auf Deutsch: Was steckt in Daily Ultimate Essentials, für wen lohnt sich der All-in-one Drink, was kostet IM8 und welchen Rabattcode gibt es?',
@@ -93,7 +93,7 @@ const config: SiteConfig = {
   faq: [
     { question: 'Was ist IM8?', answer: 'IM8 Daily Ultimate Essentials ist ein Premium-All-in-one Pulver, das als tägliches Getränk genutzt wird. Es kombiniert mehrere Nährstoff- und Pflanzenstoff-Kategorien in einer Routine.' },
     { question: 'Lohnt sich IM8 in Deutschland?', answer: 'IM8 kann sich lohnen, wenn du bewusst eine einfache tägliche Routine suchst und nicht mehrere Einzelprodukte kombinieren willst. Wer nur einen einzelnen Wirkstoff sucht, fährt oft günstiger mit einem gezielten Produkt.' },
-    { question: 'Gibt es einen IM8 Rabattcode?', answer: 'Über unseren Partnerlink ist aktuell der Code LMC hinterlegt. Prüfe den finalen Rabatt immer direkt im Checkout, weil Aktionen und Versandbedingungen sich ändern können.' },
+    { question: 'Gibt es einen IM8 Rabattcode?', answer: 'Über unseren Link ist aktuell der Code LMC hinterlegt. Prüfe den finalen Rabatt immer direkt im Checkout, weil Aktionen und Versandbedingungen sich ändern können.' },
     { question: 'Ist IM8 ein Medikament?', answer: 'Nein. IM8 ist ein Nahrungsergänzungsmittel und ersetzt keine medizinische Beratung, Diagnose oder Behandlung.' },
     { question: 'Wie nimmt man IM8 ein?', answer: 'IM8 wird typischerweise als Pulver mit Wasser gemischt und als tägliches Getränk genutzt. Die genaue Anwendung sollte nach Herstellerangaben erfolgen.' },
     { question: 'Für wen ist IM8 eher nicht geeignet?', answer: 'Wenn du schwanger bist, Medikamente nimmst, krank bist oder empfindlich auf bestimmte Inhaltsstoffe reagierst, solltest du vor der Nutzung ärztlichen Rat einholen.' }
@@ -112,6 +112,9 @@ const config: SiteConfig = {
   pages: [
     { type: 'blog', label: 'IM8 Erfahrungen', slug: '/' },
     { type: 'blog', label: 'IM8 Rabattcode', slug: '/im8-rabattcode/' },
+    { type: 'blog', label: 'IM8 Test', slug: '/im8-test/' },
+    { type: 'blog', label: 'IM8 Preis', slug: '/im8-preis/' },
+    { type: 'blog', label: 'IM8 Deutschland', slug: '/im8-deutschland/' },
   ],
 };
 

@@ -10,7 +10,7 @@ import InnerNote from '@/components/InnerNote.astro';
 import config from '@/data/site.config';
 
 const topProduct = config.products[0];
-const pageTitle = 'IM8 Rabattcode 2026: Code LMC, Preis & Angebot richtig prüfen';
+const pageTitle = 'IM8 Rabattcode 2026: -10% mit Code LMC, Preis und Angebot';
 const pageDescription = 'IM8 Rabattcode auf Deutsch: Wie du den Code LMC nutzt, worauf du beim Checkout achten solltest und wann sich IM8 preislich wirklich lohnt.';
 const reviewProduct = { ...topProduct, productCategory: config.productCategory, shipping: topProduct.shipping || 'Deutschland prüfen' };
 const tocItems = [
@@ -24,7 +24,7 @@ const tocItems = [
 const faq = [
   { question: 'Wie lautet der IM8 Rabattcode?', answer: 'Der aktuelle Code ist LMC. Prüfe den finalen Rabatt immer im Checkout, weil Aktionen, Länderbedingungen und Versandkosten sich ändern können.' },
   { question: 'Wo gebe ich den IM8 Code ein?', answer: 'Normalerweise wird der Code im Checkout oder Warenkorb in das Feld für Rabattcode, Discount Code oder Promo Code eingetragen.' },
-  { question: 'Gilt der Code auch in Deutschland?', answer: 'Der Code sollte über den offiziellen Partnerlink getestet werden. Entscheidend ist der finale Checkout: Dort siehst du, ob der Rabatt und der Versand für Deutschland greifen.' },
+  { question: 'Gilt der Code auch in Deutschland?', answer: 'Der Code sollte über den offiziellen Link getestet werden. Entscheidend ist der finale Checkout: Dort siehst du, ob der Rabatt und der Versand für Deutschland greifen.' },
   { question: 'Ist IM8 mit Rabatt günstig?', answer: 'Auch mit Rabatt bleibt IM8 ein Premium-Produkt. Der Code macht den Einstieg attraktiver, ersetzt aber nicht die Frage, ob du wirklich eine All-in-one Routine brauchst.' },
   { question: 'Sollte ich IM8 nur wegen Rabatt kaufen?', answer: 'Nein. Der Rabatt ist ein Bonus. Sinnvoll ist IM8 vor allem, wenn du eine einfache tägliche Supplement-Routine suchst.' },
 ];
@@ -36,7 +36,7 @@ const faq = [
 
   <BlogHero
     title={pageTitle}
-    description="Kurz gesagt: Der IM8 Rabattcode ist nützlich, aber du solltest den Endpreis, Versand und ein mögliches Abo sauber prüfen, bevor du bestellst."
+    description="Kurz gesagt: Mit dem Code LMC bekommst du aktuell -10% auf IM8, aber du solltest den Endpreis, Versand und ein mögliches Abo sauber prüfen, bevor du bestellst."
     author={config.author.name}
     authorAvatar={config.author.avatar}
     date="14. Mai 2026"
@@ -68,7 +68,7 @@ const faq = [
 
         <section id="code-nutzen" class="rich-text seo-guide">
           <h2>IM8 Rabattcode nutzen: so gehst du sauber vor</h2>
-          <p>Der aktuelle Code lautet <strong>{topProduct.promoCode}</strong>. Klicke zuerst auf den offiziellen Partnerlink, lege IM8 in den Warenkorb und prüfe dann im Checkout, ob der Code automatisch hinterlegt ist oder manuell eingegeben werden muss. Wichtig: Nicht auf den angezeigten Prozentwert allein schauen, sondern auf den tatsächlichen Endpreis.</p>
+          <p>Der aktuelle Code lautet <strong>{topProduct.promoCode}</strong> und bringt aktuell <strong>-{topProduct.promoPercent}%</strong>. Klicke zuerst auf den offiziellen Link, lege IM8 in den Warenkorb und prüfe dann im Checkout, ob der Code automatisch hinterlegt ist oder manuell eingegeben werden muss. Wichtig: Nicht auf den angezeigten Prozentwert allein schauen, sondern auf den tatsächlichen Endpreis.</p>
           <p>Gerade bei internationalen Marken können Versand, Steuern, Aktionen und Abo-Modelle den finalen Preis verändern. Deshalb ist der Code nur ein Teil der Entscheidung. Der richtige Ablauf ist: Produkt prüfen, Code eingeben, Lieferland Deutschland auswählen, Endpreis kontrollieren, dann entscheiden.</p>
         </section>
 
