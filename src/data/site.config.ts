@@ -111,6 +111,7 @@ const config: SiteConfig = {
   ],
   pages: [
     { type: 'blog', label: 'IM8 Erfahrungen', slug: '/' },
+    { type: 'blog', label: 'IM8 Rabattcode', slug: '/im8-rabattcode/' },
   ],
 };
 

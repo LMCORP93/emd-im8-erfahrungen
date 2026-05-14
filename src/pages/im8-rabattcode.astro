@@ -1,0 +1,112 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import BlogHero from '@/components/BlogHero.astro';
+import FirstReview from '@/components/FirstReview.astro';
+import TableOfContents from '@/components/TableOfContents.astro';
+import SidebarCTA from '@/components/SidebarCTA.astro';
+import ReviewPromoCard from '@/components/ReviewPromoCard.astro';
+import FAQSection from '@/components/FAQSection.astro';
+import InnerNote from '@/components/InnerNote.astro';
+import config from '@/data/site.config';
+
+const topProduct = config.products[0];
+const pageTitle = 'IM8 Rabattcode 2026: Code LMC, Preis & Angebot richtig prüfen';
+const pageDescription = 'IM8 Rabattcode auf Deutsch: Wie du den Code LMC nutzt, worauf du beim Checkout achten solltest und wann sich IM8 preislich wirklich lohnt.';
+const reviewProduct = { ...topProduct, productCategory: config.productCategory, shipping: topProduct.shipping || 'Deutschland prüfen' };
+const tocItems = [
+  { id: 'kurzfassung', label: 'Kurzfassung' },
+  { id: 'code-nutzen', label: 'Code nutzen' },
+  { id: 'preis', label: 'Preis prüfen' },
+  { id: 'abo', label: 'Abo & Versand' },
+  { id: 'lohnt-es-sich', label: 'Lohnt es sich?' },
+  { id: 'faq', label: 'FAQ' },
+];
+const faq = [
+  { question: 'Wie lautet der IM8 Rabattcode?', answer: 'Der aktuelle Code ist LMC. Prüfe den finalen Rabatt immer im Checkout, weil Aktionen, Länderbedingungen und Versandkosten sich ändern können.' },
+  { question: 'Wo gebe ich den IM8 Code ein?', answer: 'Normalerweise wird der Code im Checkout oder Warenkorb in das Feld für Rabattcode, Discount Code oder Promo Code eingetragen.' },
+  { question: 'Gilt der Code auch in Deutschland?', answer: 'Der Code sollte über den offiziellen Partnerlink getestet werden. Entscheidend ist der finale Checkout: Dort siehst du, ob der Rabatt und der Versand für Deutschland greifen.' },
+  { question: 'Ist IM8 mit Rabatt günstig?', answer: 'Auch mit Rabatt bleibt IM8 ein Premium-Produkt. Der Code macht den Einstieg attraktiver, ersetzt aber nicht die Frage, ob du wirklich eine All-in-one Routine brauchst.' },
+  { question: 'Sollte ich IM8 nur wegen Rabatt kaufen?', answer: 'Nein. Der Rabatt ist ein Bonus. Sinnvoll ist IM8 vor allem, wenn du eine einfache tägliche Supplement-Routine suchst.' },
+];
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <script type="application/ld+json" slot="json-ld" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: pageTitle, description: pageDescription, image: new URL('/images/content/im8-rabattcode-hero.webp', config.domain).toString(), author: { '@type': 'Person', name: config.author.name }, publisher: { '@type': 'Organization', name: config.siteName }, datePublished: '2026-05-14', dateModified: '2026-05-14', mainEntityOfPage: new URL('/im8-rabattcode/', config.domain).toString() })} />
+  <script type="application/ld+json" slot="json-ld" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map((item) => ({ '@type': 'Question', name: item.question, acceptedAnswer: { '@type': 'Answer', text: item.answer } })) })} />
+
+  <BlogHero
+    title={pageTitle}
+    description="Kurz gesagt: Der IM8 Rabattcode ist nützlich, aber du solltest den Endpreis, Versand und ein mögliches Abo sauber prüfen, bevor du bestellst."
+    author={config.author.name}
+    authorAvatar={config.author.avatar}
+    date="14. Mai 2026"
+    readingTime="8 Min. Lesezeit"
+    breadcrumbs={[{ label: 'IM8 Rabattcode', href: '/im8-rabattcode/' }]}
+    bannerImage="/images/content/im8-rabattcode-hero.webp"
+    product={{ name: topProduct.name, image: topProduct.image, promoCode: topProduct.promoCode, promoPercent: topProduct.promoPercent, originalPrice: topProduct.originalPrice, discountPrice: topProduct.discountPrice, affiliateLink: topProduct.affiliateLink }}
+    showOfferBlock={true}
+  />
+
+  <main style="background-color:#ffffff;">
+    <div class="container-large padding-global"><div class="padding-section-medium"><div class="blog-grid">
+      <div class="content-column">
+        <div id="kurzfassung">
+          <FirstReview
+            tag="RABATTCODE"
+            heading="Der Code LMC ist sinnvoll, wenn du IM8 ohnehin testen willst — aber der Checkout entscheidet."
+            paragraphs={[
+              'Viele Rabattcode-Seiten machen es zu einfach: Code kopieren, kaufen, fertig. Bei IM8 lohnt sich ein nüchterner Blick, weil das Produkt klar im Premium-Segment liegt. Der Rabatt ist hilfreich, aber der Endpreis hängt auch von Versand, Abo-Option und aktueller Aktion ab.',
+              'Meine Empfehlung: Nutze den offiziellen Link, teste den Code LMC im Checkout und entscheide erst nach dem finalen Gesamtpreis. Wenn du eine All-in-one Routine willst, kann der Code den Einstieg verbessern. Wenn du nur nach dem billigsten Supplement suchst, ist IM8 wahrscheinlich nicht die richtige Wahl.'
+            ]}
+            assets={['Code LMC direkt im Checkout testen', 'Finalen Endpreis inklusive Versand prüfen', 'Abo-Optionen bewusst lesen', 'Nur kaufen, wenn IM8 wirklich zu deiner Routine passt']}
+            considerations={['Premium-Preis bleibt auch mit Rabatt', 'Rabattbedingungen können sich ändern', 'Nicht als medizinische Lösung verstehen']}
+            product={{ brandName: topProduct.brand, brandLogoSrc: topProduct.brandLogo, rating: topProduct.rating, reviewLabel: 'Rabattcode & Preis-Check', ctaText: 'Code testen', ctaLink: topProduct.affiliateLink }}
+          />
+        </div>
+
+        <TableOfContents items={tocItems} />
+
+        <section id="code-nutzen" class="rich-text seo-guide">
+          <h2>IM8 Rabattcode nutzen: so gehst du sauber vor</h2>
+          <p>Der aktuelle Code lautet <strong>{topProduct.promoCode}</strong>. Klicke zuerst auf den offiziellen Partnerlink, lege IM8 in den Warenkorb und prüfe dann im Checkout, ob der Code automatisch hinterlegt ist oder manuell eingegeben werden muss. Wichtig: Nicht auf den angezeigten Prozentwert allein schauen, sondern auf den tatsächlichen Endpreis.</p>
+          <p>Gerade bei internationalen Marken können Versand, Steuern, Aktionen und Abo-Modelle den finalen Preis verändern. Deshalb ist der Code nur ein Teil der Entscheidung. Der richtige Ablauf ist: Produkt prüfen, Code eingeben, Lieferland Deutschland auswählen, Endpreis kontrollieren, dann entscheiden.</p>
+        </section>
+
+        <ReviewPromoCard product={reviewProduct} />
+
+        <section id="preis" class="rich-text seo-guide">
+          <h2>Preis prüfen: wann der IM8 Code wirklich hilft</h2>
+          <p>IM8 ist kein Billigprodukt. Der Rabattcode macht vor allem dann Sinn, wenn du das Produkt ohnehin ernsthaft testen möchtest. Er senkt die Einstiegshürde, aber er verwandelt IM8 nicht in ein günstiges Standard-Multivitamin. Der Vergleich sollte deshalb nicht gegen das billigste Einzelprodukt laufen, sondern gegen eine komplette Routine aus mehreren Supplements.</p>
+          <p>Wenn IM8 für dich mehrere Produkte ersetzt, kann der Preis nachvollziehbarer sein. Wenn du aber nur einen einzelnen Wirkstoff suchst, ist ein gezieltes Einzelprodukt oft günstiger. Genau deshalb ist diese Rabattcode-Seite nicht nur eine Coupon-Seite, sondern ein Preis-Check.</p>
+        </section>
+
+        <InnerNote emoji="💡" text="Der beste Rabatt ist der, der zu einem Produkt passt, das du wirklich brauchst. Nicht anders herum." />
+
+        <section id="abo" class="rich-text seo-guide">
+          <h2>Abo, Versand und Deutschland: was du vor dem Kauf prüfen solltest</h2>
+          <p>Viele Premium-Supplement-Marken zeigen den besten Preis in Verbindung mit einem Abo oder einer wiederkehrenden Lieferung. Das kann sinnvoll sein, wenn du IM8 dauerhaft nutzen willst. Für den ersten Test würde ich aber bewusst prüfen, ob du einmalig bestellen kannst und welche Bedingungen für Kündigung, Lieferung und Folgebestellungen gelten.</p>
+          <p>Für Deutschland ist zusätzlich wichtig, ob Versandkosten und Lieferzeit transparent angezeigt werden. Der Code kann funktionieren, aber der finale Warenkorb ist die Wahrheit. Wenn der Rabatt durch hohe Versandkosten neutralisiert wird, ist das Angebot weniger attraktiv.</p>
+        </section>
+
+        <section id="lohnt-es-sich" class="rich-text seo-guide">
+          <h2>Lohnt sich IM8 mit Rabattcode?</h2>
+          <p><strong>Ja, wenn du IM8 als Premium-All-in-one Routine bewertest.</strong> Dann kann der Code LMC helfen, den ersten Kauf attraktiver zu machen. Besonders sinnvoll ist das für Menschen, die eine einfache tägliche Lösung wollen und nicht mehrere einzelne Produkte kombinieren möchten.</p>
+          <p><strong>Nein, wenn du nur wegen Rabatt kaufst.</strong> Ein Code sollte nie der Hauptgrund sein. IM8 bleibt ein hochwertiges, aber teures Produkt. Der Kauf lohnt sich nur, wenn der Use-Case passt: Routine, Convenience, Premium-Drink und Bereitschaft, mehr für Einfachheit zu zahlen.</p>
+          <p>Mein Fazit: Code testen, Endpreis prüfen, dann nüchtern entscheiden. Wenn die Routine zu dir passt, ist der Rabatt ein guter Bonus.</p>
+        </section>
+
+        <section id="faq" class="faq-section"><FAQSection faq={faq} title="Häufige Fragen zum IM8 Rabattcode" /></section>
+      </div>
+      <aside class="sidebar-column"><div class="sidebar-sticky"><SidebarCTA logoSrc={topProduct.brandLogo}
+              productName={topProduct.name}
+              brandName={topProduct.brand} promoCode={topProduct.promoCode} promoPercent={topProduct.promoPercent} originalPrice={topProduct.originalPrice} discountPrice={topProduct.discountPrice} ctaLink={topProduct.affiliateLink} heroImage={topProduct.image} rating={topProduct.rating} reviewCount={topProduct.reviewCount} /></div></aside>
+    </div></div></div>
+  </main>
+</BaseLayout>
+
+<style>
+  .seo-guide { margin-top: 1.5rem; padding-top: 1.5rem; border-top: 2px solid #f0ebe3; }
+  .seo-guide .rich-text h3, .seo-guide h3 { margin-top: 1.5rem; margin-bottom: .75rem; font-size: 1.25rem; font-weight: 600; color: #242424; }
+  .seo-guide p { margin-bottom: 1rem; line-height: 1.8; color: #444; }
+  .faq-section { margin-top: 1.5rem; padding-top: 1.5rem; border-top: 2px solid #f0ebe3; }
+</style>
