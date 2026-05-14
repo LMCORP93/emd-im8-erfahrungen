@@ -35,8 +35,8 @@ const products: Product[] = [
     discountPrice: '$100.80',
     affiliateLink: 'https://taap.it/im8health',
     origin: '🇺🇸 USA',
-    availability: 'Online verfügbar',
-    shipping: 'Lieferung nach Deutschland prüfen',
+    availability: 'Online verfügbar, Lieferung nach Deutschland möglich',
+    shipping: 'Lieferung nach Deutschland möglich',
     productType: 'All-in-one Pulver für tägliche Mikronährstoff-Routine',
     pros: [
       'Sehr kompletter Daily-Drink statt einzelnes Standard-Supplement',
