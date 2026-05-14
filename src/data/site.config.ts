@@ -71,7 +71,7 @@ const config: SiteConfig = {
   seo: {
     title: 'IM8 Erfahrungen 2026: Test, Wirkung, Preis & Rabattcode',
     description: 'IM8 Erfahrungen auf Deutsch: Was steckt in Daily Ultimate Essentials, für wen lohnt sich der All-in-one Drink, was kostet IM8 und welchen Rabattcode gibt es?',
-    ogImage: '/images/content/im8-erfahrungen-hero.webp',
+    ogImage: '/og-image.jpg',
   },
   analyticsMeasurementId: undefined,
   breadcrumbs: [{ label: 'IM8 Erfahrungen', href: '/' }],
