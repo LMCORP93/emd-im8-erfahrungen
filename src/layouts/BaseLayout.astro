@@ -25,12 +25,14 @@ const robotsContent = config.isIndexable === false
   ? 'noindex, nofollow, noarchive, nosnippet, noimageindex'
   : 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1';
 
-// Auto-generate nav links from pages config (max 3 words each)
-const navLinks = config.pages.map(p => ({ label: p.label, href: p.slug }));
+// Header: only the key money/review links to keep the navbar clean. Full list stays in footer.
+const navLinks = config.pages
+  .filter((p) => p.slug === '/' || p.slug.includes('test') || p.slug.includes('rabattcode'))
+  .map((p) => ({ label: p.label, href: p.slug }));
 const headerCtaLink = config.products[0].affiliateLink;
 const footerLinks = [
   { label: 'Startseite', href: '/' },
-  ...config.pages.map(p => ({ label: p.label, href: p.slug })),
+  ...config.pages.filter((p) => p.slug !== '/').map(p => ({ label: p.label, href: p.slug })),
 ];
 ---
 
