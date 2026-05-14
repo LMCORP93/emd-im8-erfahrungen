@@ -42,7 +42,7 @@ const products: Product[] = [
       'Sehr kompletter Daily-Drink statt einzelnes Standard-Supplement',
       'Premium-Positionierung mit Vitaminen, Mineralstoffen und Pflanzenstoffen',
       'Praktisch für Menschen, die mehrere Produkte durch eine Routine ersetzen wollen',
-      'Offizieller Link mit LMC-Code verfügbar'
+      'Offizieller Link mit Rabattcode verfügbar'
     ],
     cons: [
       'Deutlich teurer als einfache Multivitamin- oder Elektrolytprodukte',
@@ -79,7 +79,7 @@ const config: SiteConfig = {
     assets: [
       'Starker All-in-one Ansatz für eine tägliche Morgenroutine',
       'Gute Option für Käufer, die mehrere Supplements vereinfachen wollen',
-      'Premium-Auftritt, klarer Drink-Use-Case und offizieller LMC-Code',
+      'Premium-Auftritt, klarer Drink-Use-Case und offizieller Rabattcode',
       'Am spannendsten für Routine, Energiegefühl und allgemeine Versorgung, nicht als medizinische Lösung'
     ],
     considerations: [
