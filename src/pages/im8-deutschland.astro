@@ -31,7 +31,7 @@ const faq = [
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription}>
-  <script type="application/ld+json" slot="json-ld" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: pageTitle, description: pageDescription, image: new URL('/images/content/im8-deutschland-hero-brand-v3.webp', config.domain).toString(), author: { '@type': 'Person', name: config.author.name }, publisher: { '@type': 'Organization', name: config.siteName }, datePublished: '2026-05-14', dateModified: '2026-05-14', mainEntityOfPage: new URL('/im8-deutschland/', config.domain).toString() })} />
+  <script type="application/ld+json" slot="json-ld" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: pageTitle, description: pageDescription, image: new URL('/images/content/im8-deutschland-hero.webp', config.domain).toString(), author: { '@type': 'Person', name: config.author.name }, publisher: { '@type': 'Organization', name: config.siteName }, datePublished: '2026-05-14', dateModified: '2026-05-14', mainEntityOfPage: new URL('/im8-deutschland/', config.domain).toString() })} />
   <script type="application/ld+json" slot="json-ld" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map((item) => ({ '@type': 'Question', name: item.question, acceptedAnswer: { '@type': 'Answer', text: item.answer } })) })} />
 
   <BlogHero
@@ -42,7 +42,7 @@ const faq = [
     date="14. Mai 2026"
     readingTime='8 Min. Lesezeit'
     breadcrumbs={[{ label: 'IM8 Deutschland', href: '/im8-deutschland/' }]}
-    bannerImage='/images/content/im8-deutschland-hero-brand-v3.webp'
+    bannerImage='/images/content/im8-deutschland-hero.webp'
     product={{ name: topProduct.name, image: topProduct.image, promoCode: topProduct.promoCode, promoPercent: topProduct.promoPercent, originalPrice: topProduct.originalPrice, discountPrice: topProduct.discountPrice, affiliateLink: topProduct.affiliateLink }}
     showOfferBlock={true}
   />
@@ -103,7 +103,7 @@ const faq = [
 
 <section id="deutschland-versand-detail" class="rich-text seo-guide">
           <h2>Was deutsche Käufer vor der Bestellung prüfen sollten</h2>
-          <ContentImage src="/images/content/im8-deutschland-versand-brand-v3.webp" alt="IM8 Deutschland Versand mit neutralem Paket und orangefarbenem Drink" caption="Für Deutschland zählt vor allem: Lieferung, Endpreis und klare Bedingungen." />
+          <ContentImage src="/images/content/im8-deutschland-versand.webp" alt="IM8 Deutschland Versand mit neutralem Paket und orangefarbenem Drink" caption="Für Deutschland zählt vor allem: Lieferung, Endpreis und klare Bedingungen." />
           <p>Die Suchanfrage <strong>IM8 Deutschland</strong> ist nicht dekorativ. Sie zeigt eine sehr konkrete Unsicherheit: Kann ich aus Deutschland bestellen, was kostet es wirklich, und sind die Lieferbedingungen transparent? Genau darauf muss die Seite antworten.</p>
           <p>Bei einem internationalen Produkt wollen deutsche Käufer vor allem böse Überraschungen vermeiden. Deshalb sind Checkout, Lieferland, mögliche Gebühren, Lieferzeit und Abo-Auswahl wichtiger als große Produktversprechen. Das ist weniger glamourös, aber für die Conversion deutlich nützlicher.</p>
           <ul>
@@ -116,7 +116,7 @@ const faq = [
 
         <section id="deutschland-checkout" class="rich-text seo-guide">
           <h2>Der Checkout ist wichtiger als jede Behauptung</h2>
-          <ContentImage src="/images/content/im8-deutschland-checkout-brand-v3.webp" alt="IM8 Deutschland Checkout unscharf mit orangefarbenem Drink" caption="Der Checkout bestätigt, was eine unabhängige Seite nicht für die Marke garantieren sollte." />
+          <ContentImage src="/images/content/im8-deutschland-checkout.webp" alt="IM8 Deutschland Checkout unscharf mit orangefarbenem Drink" caption="Der Checkout bestätigt, was eine unabhängige Seite nicht für die Marke garantieren sollte." />
           <p>Ich würde hier bewusst vorsichtig bleiben: Eine redaktionelle Seite sollte keine Lieferbedingungen erfinden. Sie sollte den Leser zu den richtigen Kontrollpunkten führen. Wenn Checkout, Land, Preis, Code und Versand klar angezeigt werden, ist die Entscheidung sauber.</p>
           <p>Der Code LMC mit -10% ist ein interessanter Hebel, muss aber im deutschen Checkout-Kontext geprüft werden. Genau deshalb ist diese Seite sinnvoll: Sie verwandelt die Frage „ist IM8 in Deutschland verfügbar?“ in eine klare Kaufprüfung.</p>
           <ul>
@@ -131,7 +131,7 @@ const faq = [
 
 <section id="deutschland-checkliste-detail" class="rich-text seo-guide">
           <h2>Schnelle Entscheidung: aus Deutschland kaufen oder warten?</h2>
-          <ContentImage src="/images/content/im8-deutschland-checkliste-brand-v3.webp" alt="IM8 Deutschland Checkliste Lieferung mit neutralem Paket" caption="Eine klare Entscheidung ist besser als ein schneller, schlecht verstandener Kauf." />
+          <ContentImage src="/images/content/im8-deutschland-checkliste.webp" alt="IM8 Deutschland Checkliste Lieferung mit neutralem Paket" caption="Eine klare Entscheidung ist besser als ein schneller, schlecht verstandener Kauf." />
           <p>Wenn im Checkout alles transparent ist, kann IM8 für deutsche Käufer interessant sein, die eine Premium-Routine suchen. Wenn eine wichtige Information fehlt, würde ich warten oder den offiziellen Support kontaktieren, bevor ich bezahle.</p>
           <ul>
             <li>👍 Kaufen, wenn Preis, Lieferung und Code klar sind.</li>
