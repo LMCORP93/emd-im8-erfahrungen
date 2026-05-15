@@ -110,11 +110,11 @@ const config: SiteConfig = {
     { id: 'faq', label: 'FAQ' },
   ],
   pages: [
-    { type: 'blog', label: 'IM8 Erfahrungen', slug: '/' },
-    { type: 'blog', label: 'IM8 Rabattcode', slug: '/im8-rabattcode/' },
-    { type: 'blog', label: 'IM8 Test', slug: '/im8-test/' },
-    { type: 'blog', label: 'IM8 Preis', slug: '/im8-preis/' },
-    { type: 'blog', label: 'IM8 Deutschland', slug: '/im8-deutschland/' },
+    { type: 'blog', label: 'IM8 Erfahrungen', slug: '/', image: '/images/content/im8-erfahrungen-hero.webp' },
+    { type: 'blog', label: 'IM8 Rabattcode', slug: '/im8-rabattcode/', image: '/images/content/im8-rabattcode-hero.webp' },
+    { type: 'blog', label: 'IM8 Test', slug: '/im8-test/', image: '/images/content/im8-test-hero.webp' },
+    { type: 'blog', label: 'IM8 Preis', slug: '/im8-preis/', image: '/images/content/im8-preis-hero.webp' },
+    { type: 'blog', label: 'IM8 Deutschland', slug: '/im8-deutschland/', image: '/images/content/im8-deutschland-hero.webp' },
   ],
 };
 
