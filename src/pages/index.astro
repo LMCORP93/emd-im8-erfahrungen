@@ -9,6 +9,7 @@ import FAQSection from '@/components/FAQSection.astro';
 import ContentImage from '@/components/ContentImage.astro';
 import InnerNote from '@/components/InnerNote.astro';
 import config from '@/data/site.config';
+import ArticleGrid from '@/components/ArticleGrid.astro';
 
 const topProduct = config.products[0];
 const pageTitle = 'IM8 Erfahrungen 2026: Test, Preis & Rabattcode';
@@ -193,6 +194,7 @@ const faq = config.faq;
               brandName={topProduct.brand} promoCode={topProduct.promoCode} promoPercent={topProduct.promoPercent} originalPrice={topProduct.originalPrice} discountPrice={topProduct.discountPrice} ctaLink={topProduct.affiliateLink} heroImage={topProduct.image} rating={topProduct.rating} reviewCount={topProduct.reviewCount} /></div></aside>
     </div></div></div>
   </main>
+  <ArticleGrid />
 </BaseLayout>
 
 <style>

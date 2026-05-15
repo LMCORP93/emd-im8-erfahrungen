@@ -9,6 +9,7 @@ import ContentImage from '@/components/ContentImage.astro';
 import FAQSection from '@/components/FAQSection.astro';
 import InnerNote from '@/components/InnerNote.astro';
 import config from '@/data/site.config';
+import ArticleGrid from '@/components/ArticleGrid.astro';
 
 const topProduct = config.products[0];
 const reviewProduct = { ...topProduct, productCategory: config.productCategory, shipping: topProduct.shipping || 'Lieferung nach Deutschland möglich' };
@@ -163,6 +164,7 @@ const faq = [
               brandName={topProduct.brand} promoCode={topProduct.promoCode} promoPercent={topProduct.promoPercent} originalPrice={topProduct.originalPrice} discountPrice={topProduct.discountPrice} ctaLink={topProduct.affiliateLink} heroImage={topProduct.image} rating={topProduct.rating} reviewCount={topProduct.reviewCount} /></div></aside>
     </div></div></div>
   </main>
+  <ArticleGrid />
 </BaseLayout>
 
 <style>
