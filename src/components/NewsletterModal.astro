@@ -9,7 +9,7 @@ interface Props {
 const { promoCode, promoPercent, ctaLink, heroImage } = Astro.props;
 ---
 
-<div id="newsletter-modal" class="fixed inset-0 z-[100] hidden" role="dialog" aria-modal="true" aria-label="Exclusive offer">
+<div id="newsletter-modal" class="fixed inset-0 z-[100] hidden" role="dialog" aria-modal="true" aria-label="Exklusives Angebot">
   <!-- Overlay -->
   <div id="modal-overlay" class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
 
@@ -20,7 +20,7 @@ const { promoCode, promoPercent, ctaLink, heroImage } = Astro.props;
       <button
         id="modal-close"
         class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-bg-tertiary hover:bg-border-light transition-colors z-10 cursor-pointer border-0"
-        aria-label="Close"
+        aria-label="Schließen"
       >
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#242424" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
           <path d="M18 6 6 18" /><path d="m6 6 12 12" />
@@ -35,10 +35,10 @@ const { promoCode, promoPercent, ctaLink, heroImage } = Astro.props;
 
         <!-- Heading -->
         <h3 class="font-primary font-bold text-xl md:text-2xl text-text-dark mb-2">
-          Your exclusive offer is waiting.
+          Dein exklusives Angebot wartet!
         </h3>
         <p class="text-text-grey text-sm mb-6 leading-relaxed">
-          Use this promo code at checkout and save {promoPercent}% immediately.
+          Nutze diesen Rabattcode bei deiner Bestellung und spare sofort {promoPercent}%!
         </p>
 
         <!-- Promo code copy button -->
@@ -46,7 +46,7 @@ const { promoCode, promoPercent, ctaLink, heroImage } = Astro.props;
           <button
             id="modal-copy-btn"
             class="copy-promo-btn inline-flex items-center gap-2 bg-bg-tertiary border border-border-light rounded px-4 py-2.5 text-sm font-mono font-semibold text-text-dark hover:bg-border-lighter transition-colors cursor-pointer"
-            aria-label={`Copy promo code ${promoCode}`}
+            aria-label={`Rabattcode kopieren ${promoCode}`}
             data-code={promoCode}
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#777" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -55,7 +55,7 @@ const { promoCode, promoPercent, ctaLink, heroImage } = Astro.props;
             <span class="promo-code-text">{promoCode}</span>
             <span class="text-primary font-semibold">-{promoPercent}%</span>
           </button>
-          <p id="modal-copy-feedback" class="copy-feedback">✓ Code copié !</p>
+          <p id="modal-copy-feedback" class="copy-feedback">✓ Code kopiert!</p>
         </div>
 
         <!-- CTA Button -->
@@ -66,14 +66,14 @@ const { promoCode, promoPercent, ctaLink, heroImage } = Astro.props;
           class="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-white font-primary font-semibold text-base px-8 py-3 w-full mb-6 transition-colors no-underline"
           style="border-radius: 0.5rem;"
         >
-          Profiter de l'offre
+          Angebot sichern
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <path d="M5 12h14" /><path d="m12 5 7 7-7 7" />
           </svg>
         </a>
 
         <!-- Hero Image -->
-        <img src={heroImage} alt="Offer" class="w-48 h-48 mx-auto object-contain" loading="lazy" />
+        <img src={heroImage} alt="Angebot" class="w-48 h-48 mx-auto object-contain" loading="lazy" />
       </div>
     </div>
   </div>

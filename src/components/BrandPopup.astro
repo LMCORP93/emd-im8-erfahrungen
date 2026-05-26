@@ -22,7 +22,7 @@ const {
 const shortDesc = description.length > 100 ? description.slice(0, 97) + '...' : description;
 ---
 
-<div id="brand-popup" class="bp" role="dialog" aria-modal="true" aria-label="Exklusives Angebot">
+<div id="brand-popup" class="bp" role="dialog" aria-modal="true" aria-label="Partnerangebot">
   <div id="popup-overlay" class="bp-overlay"></div>
   <div class="bp-card">
     <button id="popup-close" class="bp-close" aria-label="Schließen">
@@ -36,7 +36,7 @@ const shortDesc = description.length > 100 ? description.slice(0, 97) + '...' : 
       <img src={productImage} alt={productName} class="bp-img" loading="lazy" />
 
       <!-- Tag -->
-      <span class="bp-tag">Exklusives Angebot</span>
+      <span class="bp-tag">Partnerangebot</span>
 
       <!-- Title -->
       <h3 class="bp-title">{productName}</h3>
@@ -145,7 +145,7 @@ const shortDesc = description.length > 100 ? description.slice(0, 97) + '...' : 
         navigator.clipboard.writeText(code).then(() => {
           if (textEl) {
             const original = textEl.textContent || '';
-            textEl.textContent = '✓ Kopiert!';
+            textEl.textContent = '✓ Kopiert';
             setTimeout(() => { textEl.textContent = original; }, 1500);
           }
         });
