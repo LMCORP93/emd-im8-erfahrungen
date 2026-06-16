@@ -13,8 +13,8 @@ import ArticleGrid from '@/components/ArticleGrid.astro';
 
 const topProduct = config.products[0];
 const reviewProduct = { ...topProduct, productCategory: config.productCategory, shipping: topProduct.shipping || 'Lieferung nach Deutschland möglich' };
-const pageTitle = 'IM8 Preis 2026: Kosten, Rabattcode und Angebot';
-const pageDescription = 'IM8 Preis auf Deutsch: Kosten, -10% Rabattcode LMC, Abo, Versand nach Deutschland und ob sich das Angebot wirklich lohnt.';
+const pageTitle = 'IM8 Preis 2026: Was kostet IM8 in Deutschland? Rabattcode LMC';
+const pageDescription = 'IM8 Preis 2026: Was kostet IM8 in Deutschland, wie viel spart der Rabattcode LMC (-10%), was kostet der Versand — alle Zahlen vor dem Kauf auf einen Blick.';
 const tocItems = [
   { id: 'kurzfassung', label: 'Kurzfassung' },
   { id: 'kosten', label: 'Kosten' },
@@ -66,14 +66,14 @@ const faq = [
 
         <section id="kosten" class="rich-text seo-guide">
           <h2>Was kostet IM8?</h2>
-          <p>IM8 liegt im Premium-Segment. Der Ausgangspreis im Template liegt aktuell bei {topProduct.originalPrice}, der reduzierte Preis mit Code bei {topProduct.discountPrice}. Diese Werte können sich ändern, deshalb zählt immer der finale Warenkorb.</p>
+          <p>IM8 liegt im Premium-Segment. Der Ausgangspreis liegt aktuell bei {topProduct.originalPrice}, der reduzierte Preis mit Code bei {topProduct.discountPrice}. Diese Werte können sich ändern, deshalb zählt immer der finale Warenkorb. Für einen vollständigen Überblick über das Produkt selbst lohnt sich zunächst ein Blick in unseren <a href="/">IM8 Erfahrungsbericht</a>.</p>
           <p>Wichtig ist die richtige Vergleichsbasis: Ein einzelnes günstiges Supplement schlägt IM8 fast immer beim Preis. Ein Paket aus mehreren Vitaminen, Mineralstoffen, Pflanzenstoffen und täglichen Drinks kann den Vergleich aber verändern.</p>
         </section>
 
 
 <section id="rabatt" class="rich-text seo-guide">
           <h2>IM8 Rabattcode: -10% mit Code LMC</h2>
-          <p>Der aktuelle Code lautet <strong>{topProduct.promoCode}</strong> und bringt aktuell <strong>-{topProduct.promoPercent}%</strong>. Nutze den offiziellen Link, prüfe den Code im Checkout und achte darauf, ob der Rabatt automatisch angewendet wird oder manuell eingetragen werden muss.</p>
+          <p>Der aktuelle Code lautet <strong>{topProduct.promoCode}</strong> und bringt aktuell <strong>-{topProduct.promoPercent}%</strong>. Nutze den offiziellen Link, prüfe den Code im Checkout und achte darauf, ob der Rabatt automatisch angewendet wird oder manuell eingetragen werden muss. Alle Details zum Rabattcode — einschließlich typischer Fehler beim Einlösen — findest du auf unserer <a href="/im8-rabattcode/">IM8 Rabattcode Seite</a>.</p>
           <p>Coupon-Seiten zeigen oft nur den Code. Für eine echte Kaufentscheidung brauchst du mehr: Produktpreis, Rabatt, Versandkosten, Lieferland und Abo-Bedingungen.</p>
         </section>
 
@@ -83,7 +83,7 @@ const faq = [
 <section id="abo-versand" class="rich-text seo-guide">
           <h2>Abo, Versand und Deutschland</h2>
           <p>Viele Premium-Marken koppeln den besten Preis an eine wiederkehrende Lieferung. Das kann sinnvoll sein, wenn du IM8 dauerhaft nutzen willst. Für einen ersten Test würde ich aber bewusst prüfen, ob ein Einmalkauf möglich ist und wie einfach du ein Abo verwalten kannst.</p>
-          <p>Für Deutschland ist außerdem wichtig, ob Versandkosten, Steuern und Lieferzeit transparent angezeigt werden. Viele Käufer suchen genau nach dieser Einordnung, deshalb sollte die Frage direkt beantwortet werden.</p>
+          <p>Für Deutschland ist außerdem wichtig, ob Versandkosten, Steuern und Lieferzeit transparent angezeigt werden. Viele Käufer suchen genau nach dieser Einordnung. Eine eigene Seite mit Kaufablauf, Versandcheck und Checkliste für deutsche Besteller findest du auf <a href="/im8-deutschland/">IM8 Deutschland kaufen</a>.</p>
         </section>
 
 
@@ -113,7 +113,7 @@ const faq = [
           <h2>IM8 mit einer günstigeren Alternative vergleichen</h2>
           <ContentImage src="/images/content/im8-preis-vergleich.webp" alt="IM8 Preisvergleich mit Premium-Routine ohne Verpackung" caption="Der echte Vergleich lautet: niedriger Preis gegen einfache Premium-Routine." />
           <p>Eine günstigere Alternative kann besser sein, wenn du genau weißt, was du brauchst. Wenn dein Ziel nur Magnesium, Vitamin D oder ein einzelner Wirkstoff ist, ist ein gezieltes Produkt oft logischer. IM8 wird dann interessant, wenn du Entscheidungen reduzieren und mehrere Bereiche in einer Routine bündeln willst.</p>
-          <p>Deshalb ist die Suchintention „Preis“ so wichtig. Deutsche Käufer wollen den echten Kostenrahmen verstehen, nicht nur eine Werbeaussage lesen. Die Seite muss beide Seiten zeigen: Ja, der Code hilft. Nein, IM8 ist kein Discount-Produkt.</p>
+          <p>Deshalb ist das Thema „Preis“ so wichtig. Deutsche Käufer wollen den echten Kostenrahmen verstehen, nicht nur eine Werbeaussage lesen. Die Seite muss beide Seiten zeigen: Ja, der Code hilft. Nein, IM8 ist kein Discount-Produkt.</p>
           <ul>
             <li>✅ IM8 gewinnt bei Einfachheit.</li>
             <li>✅ IM8 gewinnt beim Premium-Routine-Gefühl.</li>

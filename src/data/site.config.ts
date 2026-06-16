@@ -105,6 +105,7 @@ const config: SiteConfig = {
   tocItems: [
     { id: 'kurzfassung', label: 'Kurzfassung' },
     { id: 'was-ist-im8', label: 'Was ist IM8?' },
+    { id: 'deutschland-kaufen', label: 'In Deutschland kaufen' },
     { id: 'erfahrungen', label: 'Unsere IM8 Erfahrungen' },
     { id: 'inhaltsstoffe', label: 'Inhaltsstoffe & Formel' },
     { id: 'preis', label: 'Preis & Rabattcode' },
