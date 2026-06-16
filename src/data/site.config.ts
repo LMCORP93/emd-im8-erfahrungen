@@ -16,7 +16,7 @@ export interface SiteConfig {
   quickSummary: { assets: string[]; considerations: string[]; };
   pros: string[]; cons: string[]; faq: { question: string; answer: string }[];
   products: Product[]; tocItems: { id: string; label: string }[];
-  pages: { type: 'comparatif' | 'blog'; label: string; slug: string }[];
+  pages: { type: 'comparatif' | 'blog'; label: string; slug: string; image?: string }[];
 }
 
 const products: Product[] = [
@@ -94,6 +94,9 @@ const config: SiteConfig = {
     { question: 'Was ist IM8?', answer: 'IM8 Daily Ultimate Essentials ist ein Premium-All-in-one Pulver, das als tägliches Getränk genutzt wird. Es kombiniert mehrere Nährstoff- und Pflanzenstoff-Kategorien in einer Routine.' },
     { question: 'Lohnt sich IM8 in Deutschland?', answer: 'IM8 kann sich lohnen, wenn du bewusst eine einfache tägliche Routine suchst und nicht mehrere Einzelprodukte kombinieren willst. Wer nur einen einzelnen Wirkstoff sucht, fährt oft günstiger mit einem gezielten Produkt.' },
     { question: 'Gibt es einen IM8 Rabattcode?', answer: 'Über unseren Link ist aktuell der Code LMC hinterlegt. Prüfe den finalen Rabatt immer direkt im Checkout, weil Aktionen und Versandbedingungen sich ändern können.' },
+    { question: 'Kann ich IM8 in Deutschland kaufen und bestellen?', answer: 'Ja, IM8 kann über den offiziellen Shop auch für deutsche Käufer geprüft werden. Kontrolliere vor dem Kauf den Endpreis inklusive Versand, die Lieferbedingungen und ob der Rabattcode im Checkout greift.' },
+    { question: 'Gibt es einen aktuellen IM8 Rabattcode für Deutschland?', answer: 'Über unseren Link ist der Code LMC hinterlegt. Ob er im Checkout noch aktiv ist, hängt von der aktuellen Aktion ab. Prüfe deshalb immer den finalen Warenkorb, bevor du dich entscheidest.' },
+    { question: 'Was kostet IM8 in Deutschland nach Rabattcode?', answer: 'Der Preis hängt von Bestellmenge, Abo-Option, Versand und aktuellem Wechselkurs ab. Der Rabattcode kann den Einstieg senken, aber der finale Betrag zählt immer im offiziellen Checkout.' },
     { question: 'Ist IM8 ein Medikament?', answer: 'Nein. IM8 ist ein Nahrungsergänzungsmittel und ersetzt keine medizinische Beratung, Diagnose oder Behandlung.' },
     { question: 'Wie nimmt man IM8 ein?', answer: 'IM8 wird typischerweise als Pulver mit Wasser gemischt und als tägliches Getränk genutzt. Die genaue Anwendung sollte nach Herstellerangaben erfolgen.' },
     { question: 'Für wen ist IM8 eher nicht geeignet?', answer: 'Wenn du schwanger bist, Medikamente nimmst, krank bist oder empfindlich auf bestimmte Inhaltsstoffe reagierst, solltest du vor der Nutzung ärztlichen Rat einholen.' }
