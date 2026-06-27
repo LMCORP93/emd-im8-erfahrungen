@@ -75,7 +75,7 @@ const faq = config.faq;
         returnFees: 'https://schema.org/ReturnFeesCustomerResponsibility',
       },
     },
-    aggregateRating: { '@type': 'AggregateRating', ratingValue: topProduct.rating, bestRating: 10, worstRating: 1, reviewCount: topProduct.reviewCount },
+    review: { '@type': 'Review', author: { '@type': 'Organization', name: config.siteName }, reviewRating: { '@type': 'Rating', ratingValue: topProduct.rating, bestRating: 10, worstRating: 1 } },
   })} />
   <script type="application/ld+json" slot="json-ld" set:html={JSON.stringify({
     '@context': 'https://schema.org',
