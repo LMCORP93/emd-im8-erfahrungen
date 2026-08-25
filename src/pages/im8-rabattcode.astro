@@ -30,6 +30,7 @@ const faq = [
   { question: 'Ist IM8 mit Rabatt günstig?', answer: 'Auch mit Rabatt bleibt IM8 ein Premium-Produkt. Der Code macht den Einstieg attraktiver, ersetzt aber nicht die Frage, ob du wirklich eine All-in-one Routine brauchst.' },
   { question: 'Sollte ich IM8 nur wegen Rabatt kaufen?', answer: 'Nein. Der Rabatt ist ein Bonus. Sinnvoll ist IM8 vor allem, wenn du eine einfache tägliche Supplement-Routine suchst.' },
 ];
+const promoProduct = { ...topProduct, productCategory: topProduct.productType, shipping: 'France' };
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription}>
@@ -76,7 +77,9 @@ const faq = [
 
         <ReviewPromoCard product={reviewProduct} />
 
-        <section id="preis" class="rich-text seo-guide">
+        
+            <div class="promo-wrap mid"><ReviewPromoCard product={promoProduct} /></div>
+            <section id="preis" class="rich-text seo-guide">
           <h2>Preis prüfen: wann der IM8 Code wirklich hilft</h2>
           <p>IM8 ist kein Billigprodukt. Der Rabattcode macht vor allem dann Sinn, wenn du das Produkt ohnehin ernsthaft testen möchtest. Er senkt die Einstiegshürde, aber er verwandelt IM8 nicht in ein günstiges Standard-Multivitamin. Der Vergleich sollte deshalb nicht gegen das billigste Einzelprodukt laufen, sondern gegen eine komplette Routine aus mehreren Supplements.</p>
           <p>Wenn IM8 für dich mehrere Produkte ersetzt, kann der Preis nachvollziehbarer sein. Wenn du aber nur einen einzelnen Wirkstoff suchst, ist ein gezieltes Einzelprodukt oft günstiger. Genau deshalb ist diese Rabattcode-Seite nicht nur eine Coupon-Seite, sondern ein Preis-Check.</p>
