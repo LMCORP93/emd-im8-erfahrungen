@@ -34,7 +34,7 @@ const products: Product[] = [
     originalPrice: '$112.00',
     discountPrice: '$100.80',
     affiliateLink: 'https://im8health.com/products/essentials-pro?snowball=LMC&selling_plan=2948432039',
-    origin: '🇺🇸 USA',
+    origin: 'USA',
     availability: 'Lieferung nach Deutschland möglich',
     shipping: 'Lieferung nach Deutschland möglich',
     productType: 'All-in-one Pulver für tägliche Mikronährstoff-Routine',
