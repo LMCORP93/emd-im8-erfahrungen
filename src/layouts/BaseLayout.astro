@@ -2,6 +2,7 @@
 import '@/styles/global.css';
 import Navbar from '@/components/Navbar.astro';
 import Footer from '@/components/Footer.astro';
+import CookieNotice from '@/components/CookieNotice.astro';
 import BrandPopup from '@/components/BrandPopup.astro';
 import config from '@/data/site.config';
 
@@ -168,5 +169,6 @@ const footerLinks = [
       navLinks={footerLinks}
       copyright="Alle Rechte vorbehalten - Tims Erfahrungsberichte"
     />
+    <CookieNotice lang="de" privacyHref="/privacy-policy/" />
   </body>
 </html>
