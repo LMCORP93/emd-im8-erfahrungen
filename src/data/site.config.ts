@@ -33,7 +33,7 @@ const products: Product[] = [
     promoPercent: 10,
     originalPrice: '$112.00',
     discountPrice: '$100.80',
-    affiliateLink: 'https://taap.it/im8health',
+    affiliateLink: 'https://im8health.com/products/essentials-pro?snowball=LMC&selling_plan=2948432039',
     origin: '🇺🇸 USA',
     availability: 'Lieferung nach Deutschland möglich',
     shipping: 'Lieferung nach Deutschland möglich',
