@@ -213,11 +213,6 @@ html {
   .rich-text h3 { margin-top: 2rem; margin-bottom: 0.75rem; }
 }
 
-/* ── Blog hero gradient ──────────────────────────────────────────── */
-.hero-blog-gradient {
-  background: linear-gradient(135deg, #ef7a1a 0%, #d66a12 50%, #b13b41 100%);
-}
-
 /* ── Section divider line ────────────────────────────────────────── */
 .line {
   height: 1px;
